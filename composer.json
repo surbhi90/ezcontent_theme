@@ -1,0 +1,10 @@
+{
+  "name": "srijanone/ezcontent_theme",
+  "description": "Ezcontent starter theme.",
+  "type": "drupal-theme",
+  "homepage": "https://github.com/srijanone/ezcontent_theme",
+  "support": {
+    "issues": "https://github.com/srijanone/ezcontent_theme"
+  },
+  "license": "GPL-2.0+"
+}
