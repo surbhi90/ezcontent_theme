@@ -13,42 +13,55 @@
   &--type-liveblog {
     .main-content {
       position: relative;
-      .field {
-        &--name-field-status {
-          position: absolute;
-          top: 4px;
-          left: 30px;
-          z-index: 100;
-          &::after {
-            content: '.';
-            display: inline-block;
-            margin-left: 2px;
-            color: red;
-            font-size: 65px;
-            line-height: 12px;
-            animation: 1s blink ease infinite;
-          }
+      .field--name-field-status {
+        padding: 15px 0 0;
+        &::after {
+          content: '.';
+          display: inline-block;
+          margin-left: 2px;
+          color: red;
+          font-size: 65px;
+          line-height: 0;
+          animation: 1s blink ease infinite;
         }
-        &--type-text-with-summary {
-          background: $color-grey-light-dark;
-          padding: 15px;
-          border: solid 1px rgba(255,0,0,0.7);
-          border-top: 0;
+      }
+      .liveblog-post {
+        .field--name-field-content {
+          margin-top: 15px;
+          .field--name-field-body {
+            max-width: 100%;
+            padding: 0;
+            border: none;
+            background: transparent;
+          }
         }
       }
     }
     .title {
-      background: $color-grey-light-dark;
-      padding: 45px 15px 0;
+      background: $color-light-red;
+      padding: 25px 20px 20px;
       margin-bottom: 0;
       border: solid 1px rgba(255,0,0,0.7);
       border-bottom: 0;
+      color: white;
+      font-weight: 700;
     }
     .node {
       &__content {
         font-size: $default-font-size;
         color: $color-grey-light-3;
         margin-top: 0;
+        > .field--type-text-with-summary {
+          background: $color-dark-red;
+          padding: 15px 20px;
+          color: white;
+          border: solid 1px rgba(255,0,0,0.7);
+          border-top: 0;
+          a {
+            color: white;
+            text-decoration: underline;
+          }
+        }
       }
     }
     article {
@@ -60,6 +73,10 @@
       &--danger {
         color: red;
       }
+    }
+    div.liveblog-post {
+      margin-bottom: 30px;
+      border-bottom: none;
     }
   }
 }
@@ -103,13 +120,11 @@
     }
   }
 }
-.liveblog-post {
+article.liveblog-post {
   .liveblog-posts & {
-    border-color: $color-grey-light-dark;
-    margin-bottom: 30px;
-    &:last-child {
-      border-bottom: 0;
-    }
+    border-bottom: 1px solid $color-dark-red;
+    background-color: #f3f3f3;
+    padding: 25px 20px 10px;
   }
   .node {
     &__content {
@@ -136,6 +151,10 @@
       margin-bottom: 0;
       margin-right: 20px;
       font-size: 12px;
+      font-weight: 700;
+    }
+    &--name-uid {
+      display: none;
     }
     &--type-link {
       a {
@@ -160,6 +179,15 @@
       &:hover {
         background: $color-primary;
       }
+    }
+  }
+  .field--name-field-media {
+    overflow: hidden;
+  }
+  .field--type-image,
+  .field--name-field-user-picture {
+    img {
+      margin-bottom: 0;
     }
   }
 }
