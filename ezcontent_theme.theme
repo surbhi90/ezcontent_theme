@@ -17,3 +17,18 @@ function ezcontent_theme_theme_suggestions_page_alter(array &$suggestions, array
     $suggestions[] = 'page__'.$content_type;
   }
 }
+
+function ezcontent_theme_preprocess_field(&$variables, $hook) {
+  kint($variables['elements']);
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for block templates.
+ */
+/*function ezcontent_theme_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (!empty($variables['elements']['content']['#block_content'])){
+    if ($variables['elements']['content']['#block_content']->bundle() == 'cards') {
+      $variables['card_block_view_mode'] = $variables['elements']['#configuration']['view_mode'];
+    }
+  }
+}*/
