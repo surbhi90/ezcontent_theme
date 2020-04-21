@@ -11,6 +11,7 @@ framework:
       css/admin/layout_builder_modal.css: {}
       css/admin/liveblog.css: {}
       css/block/content-listing-component.css: {}
+      css/block/card_list.css: {}
 
 paragraph-type-gallery:
   css:

@@ -56,10 +56,9 @@
 {% if label_hidden %}
   {% if multiple %}
     <div{{ attributes.addClass(classes, 'field--items') }}>
-    <h1>{{ card_block_view_mode }}</h1>
       {% for item in items %}
         {% set layoutClassC = item.content['#paragraph'].layout_selection.target_id %}
-        {% if layoutClassC == '' and item.content['#view_mode'] == 'default' %}
+        {% if layoutClassC == '' and card_block_view_mode == 'cards_grid_3xn' %}
             {% set layoutClass = 'col-12 col-sm-12 col-md-4' %}
         {% else %}
             {% set layoutClass = 'col-12 col-sm-12' %}
