@@ -17,3 +17,12 @@ function ezcontent_theme_theme_suggestions_page_alter(array &$suggestions, array
     $suggestions[] = 'page__'.$content_type;
   }
 }
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function ezcontent_theme_preprocess_field(&$variables) {
+  if (($variables['element']['#field_name'] == 'field_card' && $variables['element']['#entity_type'] == 'block_content')) {
+    $variables['card_block_view_mode'] = $variables['element']['#view_mode'];
+  }
+}
