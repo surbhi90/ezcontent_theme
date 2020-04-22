@@ -12,6 +12,7 @@ framework:
       css/admin/liveblog.css: {}
       css/block/content-listing-component.css: {}
       css/block/card_list.css: {}
+      css/block/referenced-card.css: {}
 
 paragraph-type-gallery:
   css:
