@@ -14,13 +14,14 @@
     .main-content {
       position: relative;
       .field--name-field-status {
-        padding: 15px 0 0;
-        &::after {
+        padding: 10px 0 0;
+        text-transform: uppercase;
+        &::before {   
           content: '.';
           display: inline-block;
-          margin-left: 2px;
-          color: red;
-          font-size: 65px;
+          margin-right: 2px;
+          color: $color-dark-red;
+          font-size: 80px;
           line-height: 0;
           animation: 1s blink ease infinite;
         }
