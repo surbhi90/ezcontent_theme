@@ -23,7 +23,7 @@
       left: 0;
     }
 
-    &.slick-next {
+    &.slick-next {  
       right: 0;
     }
   }
@@ -47,6 +47,20 @@
       @include respond(phone-min) {
         padding: 20px 40px 20px 40px;
       }
+    }
+
+    // Handle dynamic text position.
+
+    .hero_media_content.center {
+      text-align: center;
+    }
+
+    .hero_media_content.left {
+      text-align: left;
+    }
+
+    .hero_media_content.right {
+      text-align: right;
     }
 
     .blazy__caption {
