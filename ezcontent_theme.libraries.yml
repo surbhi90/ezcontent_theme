@@ -92,3 +92,8 @@ bootstrap_cdn:
   css:
     component:
       //stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css: {}
+
+moderation-dashboard-css:
+  css:
+    theme:
+      css/admin/moderation_dashboard.css: {}

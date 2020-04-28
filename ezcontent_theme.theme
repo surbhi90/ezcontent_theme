@@ -26,3 +26,12 @@ function ezcontent_theme_preprocess_field(&$variables) {
     $variables['card_block_view_mode'] = $variables['element']['#view_mode'];
   }
 }
+
+/**
+ * Implements hook_preprocess_views_view().
+ */
+function ezcontent_theme_preprocess_views_view(&$variables) {
+  if (in_array($variables['view']->id(),['content_moderation_dashboard_in_review', 'moderation_dashboard_recent_changes', 'moderation_dashboard_recently_created'])) {
+    $variables['view_array']['#attached']['library'][] = 'ezcontent_theme/moderation-dashboard-css';
+  }
+}
