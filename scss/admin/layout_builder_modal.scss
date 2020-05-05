@@ -52,7 +52,7 @@
     height: 25px;
   }
   .paragraph--type--card {
-    padding: 0 22px 0 30px;
+    padding: 0;
     .field--name-field-subhead,
     .field--name-field-summary {
       border: none;
@@ -74,6 +74,31 @@
       &:focus {
         background: inherit;
       }
+    }
+  }
+}
+
+ul.paragraphs-add-dialog-list input.field-add-more-submit {
+  background: #d4d4d8;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  color: #222330;
+}
+
+.ui-dialog {
+  .ui-dialog-titlebar-close {
+    &:before {
+      content: "\e014";
+      font-family: "Glyphicons Halflings" !important;
+      display: block;
+      font-size: 12px;
+      line-height: 12px;
+      color: #424242;
+    }
+    &:active,
+    &:focus {
+      background-color: transparent;
     }
   }
 }
