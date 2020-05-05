@@ -134,21 +134,25 @@
         <div id="main">
           {{ page.breadcrumb }}
           <div class="row row-offcanvas row-offcanvas-left clearfix">
+            {% if (page.sidebar_first or page.sidebar_second) %}
+              <main{{ content_attributes.addClass('col-lg-9') }}>
+            {% else %}
               <main{{ content_attributes }}>
+            {% endif %}
                 <section class="section">
                   <a id="main-content" tabindex="-1"></a>
                   {{ page.content }}
                 </section>
               </main>
             {% if page.sidebar_first %}
-              <div{{ sidebar_first_attributes }}>
+              <div{{ sidebar_first_attributes.removeClass('col-md-3').addClass('col-lg-3') }}>
                 <aside class="section" role="complementary">
                   {{ page.sidebar_first }}
                 </aside>
               </div>
             {% endif %}
             {% if page.sidebar_second %}
-              <div{{ sidebar_second_attributes }}>
+              <div{{ sidebar_second_attributes.removeClass('col-md-3').addClass('col-lg-3') }}>
                 <aside class="section" role="complementary">
                   {{ page.sidebar_second }}
                 </aside>
