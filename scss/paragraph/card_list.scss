@@ -18,7 +18,6 @@
       @extend %h2;
       padding: 0 15px;
       margin-bottom: 15px;
-      text-align: center;
       font-family: $heading-font;
       @include respond(phone-min) {
         margin-bottom: 30px;
