@@ -44,9 +44,7 @@
       bottom: 0;
       width: 100%;
       padding: 10px 0;
-      @include respond(phone-min) {
-        padding: 20px 40px 20px 40px;
-      }
+      padding: 20px 40px 20px 40px;
     }
 
     // Handle dynamic text position.
@@ -122,6 +120,10 @@
         font-size: 14px;
         padding: 5px 10px;
 
+        @include respond(phone) {
+          margin-bottom: 0;
+        }
+
         @include respond(tab-land) {
           font-size: 14px;
           padding: 5px 10px;
@@ -140,6 +142,9 @@
     }
     &.paragraph--view-mode--hero-media {
       .field {
+        &--name-field-media {
+          margin: 0;
+        }
         &--name-field-media-image {
           padding: 0;
           .media--image {
