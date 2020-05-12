@@ -13,6 +13,7 @@ framework:
       css/block/content-listing-component.css: {}
       css/block/card_list.css: {}
       css/block/referenced-card.css: {}
+      css/page/error-page.css: {}
 
 paragraph-type-gallery:
   css:
