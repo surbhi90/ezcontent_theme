@@ -7,9 +7,10 @@
   padding: 0;
 
   .field {
-
+    &--name-field-media {
+      overflow: hidden;
+    }
     &--name-field-media-image {
-
       img {
         margin: 0 auto;
       }
