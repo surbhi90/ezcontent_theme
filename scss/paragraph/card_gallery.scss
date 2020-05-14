@@ -1,0 +1,64 @@
+//import
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.paragraph--type--cards-gallery {
+  .field--name-field-card {
+    > .field__item {
+      width: 33.33%;
+    }
+  }
+  .slick-arrow {
+
+    &::before {
+      color: $color-primary;
+      opacity: 1;
+    }
+
+    &:hover::before {
+      color: $color-primary;
+    }
+  }
+  .blazy__caption {
+    background: rgba(0, 0, 0, .5);
+    bottom: 0;
+    color: $color-white;
+    display: none;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+    &:empty {
+      display: none;
+    }
+  }
+  .hero_media_content {
+    padding: 10px 40px;
+    @include respond(phone-min) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  .field {
+    &--name-field-media {
+      overflow: hidden;
+      margin-bottom: 0;
+      img {
+        margin-bottom: 0;
+      }
+    }
+    &--name-field-title {
+      margin-top: 0;
+    }
+    &--name-field-subhead {
+      border-top: none;
+    }
+    &--name-field-link {
+      text-align: right;
+      a {
+        @include btnstyle;
+      }
+    }
+  }
+}

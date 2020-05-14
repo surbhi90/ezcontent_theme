@@ -35,6 +35,7 @@ paragraph-type-card:
     theme:
       css/paragraph/card.css: {}
       css/paragraph/card_list.css: {}
+      css/paragraph/card_gallery.css: {}
 
 paragraph-type-hero-media:
   css:
