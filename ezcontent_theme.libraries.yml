@@ -65,7 +65,7 @@ paragraph-type-map:
 paragraph-type-assets:
   css:
     theme:
-      css/paragraph/assets.css: {}
+      css/paragraph/asset.css: {}
 
 paragraph-type-form:
   css:
