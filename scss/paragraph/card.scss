@@ -12,11 +12,21 @@
         padding: 0 0 0 80px ;
       }
     }
+    .layout__region--first {
+      @include respond(phone-min) {
+        padding: 0;
+      }
+    }
   }
   &.card_right_media {
     .layout__region--first {
       @include respond(phone-min) {
         padding: 0 80px 0 0 ;
+      }
+    }
+    .layout__region--second {
+      @include respond(phone-min) {
+        padding: 0;
       }
     }
   }
