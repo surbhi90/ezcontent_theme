@@ -1,0 +1,20 @@
+@import '../abstracts/mixins';
+
+.layout--twocol-section {
+  .layout__region--first {
+    @include respond(phone-min) {
+      padding-right: 15px;
+    }
+  }
+  .layout__region--second {
+    @include respond(phone-min) {
+      padding-left: 15px;
+    }
+  }
+  .layout__region--first,
+  .layout__region--second {
+    .block {
+      margin: 0 auto 30px;
+    }
+  }
+}

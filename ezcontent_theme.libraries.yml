@@ -14,6 +14,7 @@ framework:
       css/block/card_list.css: {}
       css/block/referenced-card.css: {}
       css/page/error-page.css: {}
+      css/page/landing-page.css: {}
 
 paragraph-type-gallery:
   css:
