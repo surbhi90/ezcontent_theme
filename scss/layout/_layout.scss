@@ -1,0 +1,5 @@
+.container {
+  @include respond(desktop-min) {
+    max-width: 1366px;
+  }
+}

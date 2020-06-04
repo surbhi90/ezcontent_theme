@@ -15,17 +15,10 @@
   .block-title,
   >.field--name-field-title {
     @extend %h2;
-    padding: 0 15px;
     margin-bottom: 15px;
     font-family: $heading-font;
     @include respond(phone-min) {
       margin-bottom: 30px;
-    }
-  }
-
-  .field--name-field-card {
-    >.field--item {
-      padding: 0 10px;
     }
   }
 
