@@ -99,6 +99,10 @@
         padding: 5px 10px 0;
         margin: 0;
 
+        @include respond(phone) {
+          display: none;
+        }
+
         @include respond(tab-land) {
           font-size: 14px;
         }
@@ -108,6 +112,10 @@
         border-color: transparent;
         font-size: 16px;
         padding: 5px 10px 0;
+
+        @include respond(phone) {
+          display: none;
+        }
 
         @include respond(tab-land) {
           font-size: 14px;
@@ -121,6 +129,7 @@
         padding: 5px 10px;
 
         @include respond(phone) {
+          display: none;
           margin-bottom: 0;
         }
 
@@ -133,6 +142,10 @@
       &--name-field-link {
         padding: 0 10px;
         text-align: right;
+
+        @include respond(phone) {
+          display: none;
+        }
 
         a {
           @include btnstyle;
