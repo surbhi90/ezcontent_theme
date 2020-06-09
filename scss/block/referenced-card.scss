@@ -29,6 +29,12 @@
          width: 100%;
          flex: 0 0 100%;
        }
+       .layout--twocol-section {
+        .layout__region--first,
+        .layout__region--second {
+          padding: 0;
+        }
+      }
      }
   }
   .block-field {
