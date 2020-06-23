@@ -2,4 +2,9 @@
   @include respond(desktop-min) {
     max-width: 1366px;
   }
+  .node--type-article .layout-main-wrapper & {
+    @include respond(desktop-min) {
+      max-width: 1084px;
+    }
+  }
 }
