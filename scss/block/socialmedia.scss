@@ -12,6 +12,7 @@
 
   iframe {
     margin: 30px auto !important;
+    width: 100% !important;
     @include clearfix;
   }
 }
