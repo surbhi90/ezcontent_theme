@@ -1,0 +1,18 @@
+
+	<h2 class="field--name-field-title">{{ map.title }}</h2>
+	<div class="field--name-field-short-title">{{ map.subTitle }}</div>
+	<iframe class="w-100" src={{map.url}} frameBorder="0" height="410px">
+    Map
+  </iframe>
+  <p class="field--name-field-body">{{map.body}}</p>
+  {% if map.links is defined and map.links is not null %}
+    <div class="w-100 text-right field--name-field-link">
+      {% include "@atoms/06-buttons/00-buttons.twig" with {
+        button: {
+          text: map.links.title ? map.links.title : map.links.url,
+          url: map.links.url
+        },
+        classes:'nounderline btn-primary rounded-0 white-color'
+      } %}
+    </div>
+  {% endif %}

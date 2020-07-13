@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+
+  nodejs:
+    build:
+      context: .
+    ports:
+      - ${HOST_PORT}:3000
+    volumes:
+      - .:/app/
+    working_dir: /app/
+    command: /bin/sh -c 'npm install --quite && npm run build && npm run serve && tail -f /dev/null'
+    container_name: ezcontent_patterns_${NODE_ENV}
+    restart: always

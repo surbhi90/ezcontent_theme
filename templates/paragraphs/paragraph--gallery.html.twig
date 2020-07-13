@@ -47,10 +47,90 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
+
+{% set data = {
+  title: "testing",
+  galleryComponent:{
+    items: [
+      {
+        imageData: {
+          name: "ezcontent_banner_sans_text.png",
+          metatag: null
+        },
+        file: {
+          alt: "image",
+          filename: "srijanhero.jpg",
+          url: "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-05/srijanhero.jpg"
+        }
+      },
+      {
+        imageData: {
+          name: "create_content.png",
+          metatag: null
+        },
+        file: {
+          alt: "image",
+          filename: "create_content.png",
+          url: "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/create_content_0.png"
+        }
+      },
+      {
+        imageData: {
+          name: "page_builder.png",
+          metatag: null
+        },
+        file: {
+          alt: "image",
+          filename: "page_builder.png",
+          url: "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/page_builder_0.png"
+        }
+      },
+      {
+        imageData: {
+          name: "frontend_of_choice.png",
+          metatag: null
+        },
+        file: {
+          alt: "image",
+          filename: "srijanhero_0.jpg",
+          url: "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-05/srijanhero_0.jpg"
+        }
+      },
+      {
+        imageData: {
+          name: "decoupled.png",
+          metatag: null
+        },
+        file: {
+          alt: "image",
+          filename: "decoupled.png",
+          url: "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/decoupled_0.png"
+        }
+      },
+      {
+        imageData: {
+          name: "drupal_community.png",
+          metatag: null
+        },
+        file: {
+          alt: "image",
+          filename: "drupal_community.png",
+          url: "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/drupal_community_0.png"
+        }
+      }
+    ],
+    view_mode: {
+      drupal_internal__id: "paragraph.gallery",
+      label: "Gallery"
+    },
+    type: "gallery"
+  }
+} %}
+
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-      {{ content }}
-    {% endblock %}
+  {{ kint(content.field_media_items | keys  ) }}
+  {% include "@molecules/10-GalleryComponent/00-gallery-component.twig" with data %}
+  {{ content | without('field_title', '_layout_builder', 'field_media_items', 'field_body', 'field_link') }}
   </div>
 {% endblock paragraph %}

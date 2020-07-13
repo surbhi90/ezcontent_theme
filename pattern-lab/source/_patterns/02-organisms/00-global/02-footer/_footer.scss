@@ -1,0 +1,21 @@
+.footer {
+  border-top: 1px solid $color-grey-light-dark;
+  margin: 0;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+  &--about {
+    &--address {
+      position: relative;
+      margin-bottom: 20px;
+      @include respond(phone-min) {
+        margin-bottom: 0;
+        border-right: 1px solid $color-grey-light-dark;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

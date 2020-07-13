@@ -1,0 +1,28 @@
+<section class="mt-4 pb-2 block--type-hero-media-block" aria-label="hero carousel">
+  <div class="carousel">
+    {% for key,assets in heroCarousel.heroAssets %}
+    <div class="hero_banner_wrapper"
+      style="background-image:url({{assets.image}})">
+      <div class="{{assets.detail_class}}"
+        style="background-color:{{assets.bgColor}}">
+        <div class="hero_banner_title field--name-field-title mr-0 text-black pt-0 pb-0 pr-2 pl-2 w-100" role="heading">
+          {{assets.title}}</div>
+        <div class="hero_banner_short_title pt-1 pl-2 pb-0" text_color={{assets.text_color}}>
+          {{assets.field_short_title}}</div>
+        <div class="hero_banner_subhead field--name-field-subhead pt-1 pl-2 pb-0" text_color={{assets.text_color}}>
+          {{assets.field_subhead}}</div>
+        <div class="hero_banner_text_desc mt-1 mb-1 mr-0 pl-2 text-black">
+          {{assets.description}}
+        </div>
+  
+        <div class="hero_banner_btn_wrapper float-right">
+          {% for key,value in assets.url %}
+          <a key="{{loop.index }}" class="button__group btn btn-primary rounded-0"
+            href={{value.link}}>{{value.title}}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

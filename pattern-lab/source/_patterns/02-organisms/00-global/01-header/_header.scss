@@ -1,0 +1,15 @@
+.ezcontent-header {
+  background: $color-white;
+  border-bottom: 1px solid $color-grey-light-2;
+  z-index: 99;
+  .navbar-collapse {
+    justify-content: flex-end;
+    .menu--main {
+      padding: 0 15px;
+    }
+  }
+}
+
+.ezcontent-main-wrapper {
+  margin-top: 6em;
+}

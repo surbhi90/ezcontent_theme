@@ -1,0 +1,157 @@
+@import '../../_patterns-global/scss/abstracts/variables';
+@import '../../_patterns-global/scss/abstracts/mixins';
+
+.block--type-hero-media-block {
+  padding: 0;
+  margin: 30px 0;
+  @include respond(phone-min) {
+    margin: 30px 0 90px;
+  }
+  .slick-dotted.slick-slider {
+    margin-bottom: 0;
+  }
+  .slick-dots {
+    display: none !important;
+  }
+  .slick-list {
+    z-index: -1;
+  }
+  .slick-arrow {
+    width: 36px;
+    height: 36px;
+    &::before {
+      color: $color-primary;
+      opacity: 1;
+      font-size: 36px;
+    }
+
+    &:hover::before {
+      color: $color-primary;
+    }
+
+    &.slick-prev {
+      left: 0;
+    }
+
+    &.slick-next {  
+      right: 0;
+    }
+  }
+}
+
+.hero_banner_wrapper {
+  width: 100%;
+  min-height: 540px;
+  background-color: #FFFFFF;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% !important;
+  height: 580px!important;
+  position: relative;
+  @include clearfix;
+
+
+  @media (min-width: 768px){
+    margin-top: 125px; /* -15px */
+  }
+
+  @media (min-width: 992px){
+    margin-top: 70px;
+    padding: 70px 30px;
+  }
+  div {
+    color: #FFFFFF;
+  }
+}
+.hero_banner-body {
+  cursor: grab;
+  left: 0;
+  bottom: 0;
+  height: auto;
+  padding: 20px 40px 20px 40px;
+
+  &.center {
+    text-align: center;
+  }
+
+  &.left {
+    text-align: left;
+  }
+
+  &.right {
+    text-align: right;
+  }
+}
+
+.hero_banner_title {
+  @extend %h2;
+  letter-spacing: 1px;
+  line-height: 37px;
+  padding: 0 10px;
+  width: 100%;
+  margin: 0;
+  font-family: $heading-font;
+  color: white;
+  @include respond(tab-land) {
+    font-size: 25px;
+    line-height: 25px;
+    width: 100%;
+  }
+}
+
+.hero_banner_short_title {
+  font-size: 18px;
+  padding: 5px 10px 0;
+  margin: 0;
+  @include respond(phone) {
+    display: none;
+  }
+
+  @include respond(tab-land) {
+    font-size: 14px;
+  }
+}
+
+.hero_banner_subhead {
+  border-color: transparent;
+  font-size: 16px;
+  padding: 5px 10px 0;
+  @include respond(phone) {
+    display: none;
+  }
+
+  @include respond(tab-land) {
+    font-size: 14px;
+  }
+}
+
+.hero_banner_text_desc {
+  border-color: transparent;
+  display: block;
+  font-size: 14px;
+  padding: 5px 10px;
+
+  @include respond(phone) {
+    display: none;
+    margin-bottom: 0;
+  }
+
+  @include respond(tab-land) {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
+
+.hero_banner_btn_wrapper {
+  padding: 0 10px;
+  text-align: right;
+
+  @include respond(phone) {
+    display: none;
+  }
+
+  a {
+    @include btnstyle;
+    min-width: 150px;
+  }
+}

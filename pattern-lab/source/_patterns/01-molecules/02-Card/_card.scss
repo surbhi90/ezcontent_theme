@@ -1,0 +1,115 @@
+@import '../../_patterns-global/scss/abstracts/variables';
+@import '../../_patterns-global/scss/abstracts/mixins';
+
+.layout--twocol-section {
+  display: flex;
+  flex-wrap: wrap;
+  > .layout__region {
+    flex: 0 1 100%;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--first,
+  .layout--twocol-section.layout--twocol-section--50-50 > .layout__region--second {
+    flex: 0 1 50%;
+  }
+
+  .layout--twocol-section.layout--twocol-section--33-67 > .layout__region--first,
+  .layout--twocol-section.layout--twocol-section--67-33 > .layout__region--second {
+    flex: 0 1 33%;
+  }
+
+  .layout--twocol-section.layout--twocol-section--33-67 > .layout__region--second,
+  .layout--twocol-section.layout--twocol-section--67-33 > .layout__region--first {
+    flex: 0 1 67%;
+  }
+
+  .layout--twocol-section.layout--twocol-section--25-75 > .layout__region--first,
+  .layout--twocol-section.layout--twocol-section--75-25 > .layout__region--second {
+    flex: 0 1 25%;
+  }
+
+  .layout--twocol-section.layout--twocol-section--25-75 > .layout__region--second,
+  .layout--twocol-section.layout--twocol-section--75-25 > .layout__region--first {
+    flex: 0 1 75%;
+  }
+}
+
+.paragraph--type--card {
+  @include clearfix;
+  margin-bottom: 30px;
+  padding: 0;
+  &.card_left_media {
+    .layout__region--second {
+      @include respond(phone-min) {
+        padding: 0 0 0 80px ;
+      }
+    }
+  }
+  &.card_right_media {
+    .layout__region--first {
+      @include respond(phone-min) {
+        padding: 0 80px 0 0 ;
+      }
+    }
+  }
+  .layout {
+    .layout__region {
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+
+      .block-field-blockparagraphcardfield-media {
+        height: 100%;
+
+        div,
+        section {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .field {
+    &--name-field-title {
+      @extend %h2;
+      font-family: $heading-font;
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+
+    &--name-field-short-title {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    &--name-field-subhead {
+      border-top: 1px solid $color-white;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    &--name-field-summary p {
+      border-bottom: 1px solid $color-white;
+      display: block;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    &--name-field-media-image {
+      align-items: center;
+      display: flex;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    &--name-field-link {
+      text-align: right;
+      a {
+        @include btnstyle;
+      }
+    }
+  }
+}

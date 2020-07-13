@@ -1,0 +1,40 @@
+.region-footer {
+  .edge-footer {
+    font-size: 12px;
+  }
+  .row {
+    padding: 10px 0;
+  }
+  .menu--privacy-policy {
+    border-top: 1px solid $color-grey-light-dark;
+    float: left;
+    font-size: 11px;
+    padding: 20px 0 0;
+    margin-top: 20px;
+    width: 100%;
+    .menu {
+      padding: 0;
+    }
+    li {
+      display: inline-block;
+      padding: 3px 10px;
+      @include respond(phone) {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      a {
+        padding: 0;
+        color: black;
+        font-family: $primary-font;
+        font-size: 11px;
+        &:hover,
+        &:focus {
+          background: transparent;
+        }
+      }
+      &.last {
+        float: right;
+      }
+    }
+  }
+}

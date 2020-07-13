@@ -1,0 +1,52 @@
+@import '../../_patterns-global/scss/abstracts/variables';
+
+.faq-wrapper {
+  margin-bottom: 50px;
+  padding: 0;
+  .card {
+    margin-bottom: 10px;
+  }
+  .card-header {
+    padding: 15px 15px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: $color-white-light;
+    border-color: $color-grey-light-2;
+    border-bottom: none;
+    cursor: pointer;
+    h3 {
+      font-size: 20px;
+      line-height: 22px;
+      font-family: $heading-font;
+    }
+    &[aria-expanded='true'] {
+      border-bottom: 1px solid $color-grey-light-2;
+      img {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .card-body {
+    background-color: #fff;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  }
+}
+.faq-btn {
+  border-style: none;
+  background-color: transparent;
+  color: $color-text;
+  font-size: 20px;
+  font-family: $heading-font;
+}
+.faq-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  img {
+    height: 16px;
+    width: 16px;
+    transition: all .5s;
+  }
+}

@@ -13,7 +13,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 
 var paths = {
-	sassSrc: './scss/**/**/*.{scss,sass}',
+	//sassSrc: './scss/**/**/*.{scss,sass}',
+	sassSrc: './pattern-lab/source/_patterns/**/**/*.{scss,sass}',
 	sassDest: 'css',
 	jsSrc: ['js/source/*.js', 'js/component/*.js'],
 	jsDest: 'js/build',

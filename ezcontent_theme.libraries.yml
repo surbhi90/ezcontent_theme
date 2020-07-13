@@ -19,12 +19,12 @@ framework:
 paragraph-type-gallery:
   css:
     theme:
-      css/paragraph/gallery.css: {}
+      css/01-molecules/10-GalleryComponent/00-gallery-component.css: {}
 
 paragraph-type-faq:
   css:
     theme:
-      css/paragraph/faq.css: {}
+      css/01-molecules/08-FaqComponent/00-faq-list.css: {}
 
 paragraph-type-quote:
   css:
@@ -56,7 +56,7 @@ paragraph-type-social-media:
 paragraph-type-map:
   css:
     theme:
-      css/paragraph/map.css: {}
+      css/01-molecules/04-MapComponent/00-map-component.css: {}
 
 paragraph-type-assets:
   css:
@@ -76,7 +76,7 @@ paragraph-type-view:
 paragraph-type-referenced-card:
   css:
     theme:
-      css/paragraph/referenced-card.css: {}
+      css/01-molecules/07-ReferenceCards/00-reference-cards.css: {}
 
 full-width-bg-background:
   css:

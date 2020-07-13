@@ -47,10 +47,18 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
+
+{% set data = {
+  quote: {
+    quote:content.field_quote.0['#context']['value'],
+    field__label:content.field_source.0['#context']['value']
+  }
+} %}
+
+
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-      {{ content }}
-    {% endblock %}
+  {% embed "@molecules/03-QuoteComponent/00-quote-component.twig" with data %}
+  {% endembed %}
   </div>
 {% endblock paragraph %}
