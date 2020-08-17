@@ -1,0 +1,30 @@
+.card--list {
+  margin-bottom: 50px;
+}
+.card--grid {
+  margin-bottom: 20px;
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+    > .field--item {
+      padding: 0 10px;
+    }
+  }
+  .paragraph--type--card {
+    .layout--twocol-section {
+      flex-direction: column;
+      > .layout__region--first,
+      > .layout__region--second {
+        flex: 0 1 100%;
+      }
+    }
+    .layout__region {
+      padding: 0;
+    }
+    &.card_right_media {
+      .layout--twocol-section {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}

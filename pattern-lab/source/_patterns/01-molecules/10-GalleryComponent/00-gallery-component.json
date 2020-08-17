@@ -1,0 +1,101 @@
+{
+    "galleryComponent":{
+        "items": [
+            {
+                "imageData": {
+                    "name": "ezcontent_banner_sans_text.png",
+                    "metatag": null
+                },
+                "file": {
+                    "alt": "image",
+                    "filename": "srijanhero.jpg",
+                    "url": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-05/srijanhero.jpg"
+                }
+            },
+            {
+                "imageData": {
+                    "name": "create_content.png",
+                    "metatag": null
+                },
+                "file": {
+                    "alt": "image",
+                    "filename": "create_content.png",
+                    "url": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/create_content_0.png"
+                }
+            },
+            {
+                "imageData": {
+                    "name": "page_builder.png",
+                    "metatag": null
+                },
+                "file": {
+                    "alt": "image",
+                    "filename": "page_builder.png",
+                    "url": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/page_builder_0.png"
+                }
+            },
+            {
+                "imageData": {
+                    "name": "frontend_of_choice.png",
+                    "metatag": null
+                },
+                "file": {
+                    "alt": "image",
+                    "filename": "srijanhero_0.jpg",
+                    "url": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-05/srijanhero_0.jpg"
+                }
+            },
+            {
+                "imageData": {
+                    "name": "decoupled.png",
+                    "metatag": null
+                },
+                "file": {
+                    "alt": "image",
+                    "filename": "decoupled.png",
+                    "url": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/decoupled_0.png"
+                }
+            },
+            {
+                "imageData": {
+                    "name": "drupal_community.png",
+                    "metatag": null
+                },
+                "file": {
+                    "alt": "image",
+                    "filename": "drupal_community.png",
+                    "url": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/drupal_community_0.png"
+                }
+            },
+            {
+                "imageData": {
+                    "name": "ai_content.png",
+                    "metatag": null
+                },
+                "file": {
+                    "alt": "image",
+                    "filename": "ai_content.png",
+                    "url": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/ai_content_0.png"
+                }
+            }
+        ],
+        "view_mode": {
+            "drupal_internal__id": "paragraph.gallery",
+            "label": "Gallery"
+        },
+        "type": "gallery",
+        "attributes": {
+            "field_body": {
+                "value": "<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p>\r\n",
+                "format": "basic_html",
+                "processed": "<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p>",
+                "summary": ""
+            },
+            "field_link": {
+                "uri": "http://google.com",
+                "title": "Click man",
+                "options": []
+            }
+        }
+    }
+}

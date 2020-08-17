@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="pl">
+  <head>
+    <title>Pattern Lab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="../../css/style.css?1597402421358" media="all" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css?1597402421358" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1597402421358" media="all" />
+    
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    
+    <!-- End Pattern Lab -->
+  
+  </head>
+  <body class="body"><div class="text-left paragraph--type--referenced-card" aria-label="reference cards">
+  <div class="field--name-field-article">
+          <div class="field__item" key=1>
+        <div class="field--type-image">
+          <img src="http://ezcontent53esqcn36d.devcloud.acquia-sites.com//sites/default/files/2020-04/drupal_8.png" alt="image" />
+        </div>
+        <div class="block-field-blocknodearticletitle" key=1>
+          <a href="this is path">Future of Drupal: 7, 8 or just Drupal 9? testtt</a>
+        </div>
+        <p class="referenced-summary">With Drupal’s commitment to reinventing itself to enable ambitious digital experiences, the community is getting ready for the launch of Drupal 9, and end-of-life for Drupal 7 and Drupal 8.</p>
+      </div>
+          <div class="field__item" key=2>
+        <div class="field--type-image">
+          <img src="http://ezcontent53esqcn36d.devcloud.acquia-sites.com//sites/default/files/2020-04/drupal_8.png" alt="image" />
+        </div>
+        <div class="block-field-blocknodearticletitle" key=2>
+          <a href="this is path">Should Your Enterprise Go For a Headless Commerce Architecture?</a>
+        </div>
+        <p class="referenced-summary">E-commerce enterprises looking to deliver seamless user experiences, often wonder how to do so. Is there a way that does not require them to invent their own IoT device or build back-end solutions from scratch?</p>
+      </div>
+      </div>
+</div><!--DO NOT REMOVE-->
+  <script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+  {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"templates-homepage","lineagePath":"../../patterns/03-templates-01-homepage/03-templates-01-homepage.rendered.html"},{"lineagePattern":"templates-article","lineagePath":"../../patterns/03-templates-02-article/03-templates-02-article.rendered.html"}],"lineageR":[{"lineagePattern":"templates-homepage","lineagePath":"../../patterns/03-templates-01-homepage/03-templates-01-homepage.rendered.html"},{"lineagePattern":"templates-article","lineagePath":"../../patterns/03-templates-02-article/03-templates-02-article.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternType":"molecules","patternSubtype":"ReferenceCards"},"patternExtension":"twig","patternName":"Reference Cards","patternPartial":"molecules-reference-cards","patternState":"","patternEngineName":"twig-php","extraOutput":{}}
+</script>
+
+<script>
+  window.patternData = {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"templates-homepage","lineagePath":"../../patterns/03-templates-01-homepage/03-templates-01-homepage.rendered.html"},{"lineagePattern":"templates-article","lineagePath":"../../patterns/03-templates-02-article/03-templates-02-article.rendered.html"}],"lineageR":[{"lineagePattern":"templates-homepage","lineagePath":"../../patterns/03-templates-01-homepage/03-templates-01-homepage.rendered.html"},{"lineagePattern":"templates-article","lineagePath":"../../patterns/03-templates-02-article/03-templates-02-article.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternType":"molecules","patternSubtype":"ReferenceCards"},"patternExtension":"twig","patternName":"Reference Cards","patternPartial":"molecules-reference-cards","patternState":"","patternEngineName":"twig-php","extraOutput":{}};
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+
+  var scriptLoader = {
+
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1597402421358">
+  (function() {
+    if (self != top) {
+      var cb = '1597402421358';
+      var js = [];
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+
+<script type="module">
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  import('../../styleguide/js/patternlab-pattern.modern.js');
+</script>
+
+<script id="pl-js-insert-1597402421358" nomodule>
+  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on http://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
+
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  loadJS('../../styleguide/js/patternlab-pattern.js');
+</script>
+
+  
+  </body>
+</html>

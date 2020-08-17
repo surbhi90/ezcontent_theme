@@ -1,0 +1,58 @@
+@import '../../_patterns-global/scss/abstracts/variables';
+@import '../../_patterns-global/scss/abstracts/mixins';
+
+.paragraph--type--referenced-card {
+  margin-bottom: 30px;
+  .field--name-field-article {
+    @include respond(phone-min) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+     > .field__item {
+      margin-bottom: 30px;
+      flex: 0 0 100%;
+      @include respond(phone-min) {
+         margin-bottom: 20px;
+      }
+
+      &:nth-child(3n+2) {
+        @include respond(phone-min) {
+          margin: 0 20px;
+        }
+      }
+
+      @include respond(phone-min) {
+        max-width: calc(33% - 20px);
+      }
+      // .layout__region {
+      //   width: 100%;
+      //   flex: 0 0 100%;
+      // }
+    }
+  }
+  .field--type-image {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    margin-bottom: 30px;
+  }
+  .block-field {
+    // &-blocknodearticlefield-thumbnail {
+    //   margin-bottom: 10px;
+    // }
+    &-blocknodearticletitle {
+      margin-bottom: 25px;
+      // h2 {
+        
+      // }
+      a {
+        @extend %h2;
+        color: black;
+      }
+    }
+  }
+  .referenced-summary {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,22 @@
+<section class="gallery-carousel paragraph--type--gallery-carousel" aria-label="gallery carousel">
+<div class="wrapper">
+    {% if galleryCarousel.title %}
+    <div class="gc--field--name-field-title" role="heading">{{galleryCarousel.title}}</div>
+    {% endif %}
+    <div class="carousel">
+        {% for key,value in galleryCarousel.images %}
+        <div class="gallery-block pb-4">
+            <div class="media--background banner position-relative w-100" style="background-image:url({{value.url}})">
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% if galleryCarousel.field_body %}
+    <p>{{galleryCarousel.field_body}}</p>{% endif %}
+    {% if galleryCarousel.field_link %}
+    <a href="{{galleryCarousel.field_link}}">
+        {{galleryCarousel.field_link_title ?galleryCarousel.field_link_title : galleryCarousel.field_link}}
+    </a>
+    {% endif %}
+</div>
+</section>

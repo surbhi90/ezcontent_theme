@@ -1,0 +1,15 @@
+<div class="paragraph-assets" aria-label="paragraph assets">
+    {% for key,value in paragraphAssets.assets %}
+        {% if value.videolinks is defined and value.videolinks is not null %}
+            <div class="text-center embed-responsive embed-responsive-16by9" key="{{value.d_id}}">
+                <iframe class="border-0 embed-responsive-item" width="560" height="315" src="{{value.videolinks}}"></iframe>
+            </div>
+        {% else %}
+            <div class="text-center mt-3 mb-3" key="{{d_id}}">
+                {% if value.imagePath is defined and value.imagePath is not null %}
+                    <img class="mw-100" src="{{value.imagePath}}" alt="image" />
+                {% endif %}
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>

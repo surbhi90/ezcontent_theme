@@ -1,0 +1,15 @@
+<div class="text-left paragraph--type--referenced-card" aria-label="reference cards">
+  <div class="field--name-field-article">
+    {% for key,value in referenceCard.data %}
+      <div class="field__item" key={{loop.index}}>
+        <div class="field--type-image">
+          <img src="{{value.image}}" alt="{{value.alt}}" />
+        </div>
+        <div class="block-field-blocknodearticletitle" key={{loop.index}}>
+          <a href="{{value.path}}">{{value.title}}</a>
+        </div>
+        <p class="referenced-summary">{{value.summary}}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>

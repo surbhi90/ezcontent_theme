@@ -1,0 +1,59 @@
+core: 8.x
+type: theme
+base theme: stable
+
+name: 'Ezcontent Pattern Theme'
+description: 'A Drupal based Ezcontent Pattern Theme.'
+
+libraries:
+  - ezcontent_pattern-lab/bootstrap_cdn
+  - ezcontent_pattern-lab/framework
+
+libraries-extend:
+  layout_builder/threecol_section:
+    # - ezcontent_pattern-lab/layout_builder_threecol_section
+
+regions:
+  top_header: 'Top Header'
+  top_header_form: "Top Header Form"
+  header: Header
+  header_form: "Header Form"
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  highlighted: Highlighted
+  featured_top: 'Featured top'
+  breadcrumb: Breadcrumb
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  featured_bottom_first: 'Featured bottom first'
+  featured_bottom_second: 'Featured bottom second'
+  featured_bottom_third: 'Featured bottom third'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  footer_fourth: 'Footer fourth'
+  footer_fifth: 'Footer fifth'
+
+# For compatibility with Pattern Lab templates; this list must
+# always be the folders immediately under the `$sourceDir` patterns folder
+# `$sourceDir` = defined in `pattern-lab/config/config.yml` under `sourceDir
+# patterns folder = `$sourceDir` + `_patterns/`
+component-libraries:
+  atoms:
+    paths:
+      - pattern-lab/source/_patterns/00-atoms
+  molecules:
+    paths:
+      - pattern-lab/source/_patterns/01-molecules
+  organisms:
+    paths:
+      - pattern-lab/source/_patterns/02-organisms
+  templates:
+    paths:
+      - pattern-lab/source/_patterns/03-templates
+  pages:
+    paths:
+      - pattern-lab/source/_patterns/04-pages

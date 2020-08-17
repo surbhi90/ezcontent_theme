@@ -1,0 +1,32 @@
+<section class="mt-4 pb-2 block--type-hero-media-block" aria-label="hero">
+  <div class="hero_banner_wrapper paragraph--view-mode--hero-media position-relative w-100"
+    style="background-image:url({{heroComponent.heroAsset.image}})">
+    <div class="hero_banner-body hero_media_content w-100 position-absolute text-right"
+      style="background-color:{{heroComponent.heroAsset.bgColor}}">
+      {% if heroComponent.heroAsset.title %}
+        <div class="hero_banner_title field--name-field-title mr-0 text-black pt-0 pb-0 pr-2 pl-2 w-100" role="heading">
+        {{heroComponent.heroAsset.title}}</div>
+      {% endif %}
+      {% if heroComponent.heroAsset.field_short_title %}
+        <div class="hero_banner_short_title pt-1 pl-2 pb-0" text_color={{heroComponent.heroAsset.text_color}}>
+        {{heroComponent.heroAsset.field_short_title}}</div>
+      {% endif %}
+      {% if heroComponent.heroAsset.field_subhead %}
+        <div class="hero_banner_subhead field--name-field-subhead pt-1 pl-2 pb-0" text_color={{heroComponent.heroAsset.text_color}}>
+        {{heroComponent.heroAsset.field_subhead}}</div>
+      {% endif %}
+      {% if heroComponent.heroAsset.description %}
+        <div class="hero_banner_text_desc mt-1 mb-1 mr-0 pl-2 text-black">
+        {{heroComponent.heroAsset.description}}
+      </div>
+      {% endif %}
+
+      <div class="hero_banner_btn_wrapper float-right">
+        {% for key,value in heroComponent.heroAsset.url %}
+        <a key="{{loop.index }}" class="button__group btn btn-primary rounded-0"
+          href={{value.link}}>{{value.title}}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

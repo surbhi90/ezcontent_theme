@@ -1,0 +1,9 @@
+@import '../../_patterns-global/scss/abstracts/variables';
+
+.ezcontent-header {
+  .navbar-nav {
+    .nav-link {
+      color: $color-dark-blue;
+    }
+  }
+}
