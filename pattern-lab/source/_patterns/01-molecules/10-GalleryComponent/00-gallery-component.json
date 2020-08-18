@@ -9,7 +9,7 @@
                 "file": {
                     "alt": "image",
                     "filename": "srijanhero.jpg",
-                    "url": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-05/srijanhero.jpg"
+                    "src": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-05/srijanhero.jpg"
                 }
             },
             {
@@ -20,7 +20,7 @@
                 "file": {
                     "alt": "image",
                     "filename": "create_content.png",
-                    "url": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/create_content_0.png"
+                    "src": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/create_content_0.png"
                 }
             },
             {
@@ -31,7 +31,7 @@
                 "file": {
                     "alt": "image",
                     "filename": "page_builder.png",
-                    "url": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/page_builder_0.png"
+                    "src": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/page_builder_0.png"
                 }
             },
             {
@@ -42,7 +42,7 @@
                 "file": {
                     "alt": "image",
                     "filename": "srijanhero_0.jpg",
-                    "url": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-05/srijanhero_0.jpg"
+                    "src": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-05/srijanhero_0.jpg"
                 }
             },
             {
@@ -53,7 +53,7 @@
                 "file": {
                     "alt": "image",
                     "filename": "decoupled.png",
-                    "url": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/decoupled_0.png"
+                    "src": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/decoupled_0.png"
                 }
             },
             {
@@ -64,7 +64,7 @@
                 "file": {
                     "alt": "image",
                     "filename": "drupal_community.png",
-                    "url": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/drupal_community_0.png"
+                    "src": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/drupal_community_0.png"
                 }
             },
             {
@@ -75,7 +75,7 @@
                 "file": {
                     "alt": "image",
                     "filename": "ai_content.png",
-                    "url": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/ai_content_0.png"
+                    "src": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/ai_content_0.png"
                 }
             }
         ],

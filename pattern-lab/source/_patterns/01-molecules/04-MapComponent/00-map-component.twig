@@ -1,18 +1,28 @@
-
-	<h2 class="field--name-field-title">{{ map.title }}</h2>
+{# map component #}
+  <div class = "map-component">
+  {% include "@atoms/02-text/00-headings.twig" with {
+    "heading_level": 2,
+    "heading": map.title
+  } %}
 	<div class="field--name-field-short-title">{{ map.subTitle }}</div>
 	<iframe class="w-100" src={{map.url}} frameBorder="0" height="410px">
     Map
   </iframe>
-  <p class="field--name-field-body">{{map.body}}</p>
+  {# <p class="field--name-field-body">{{map.body}}</p> #}
+
+  {% include "@atoms/02-text/01-paragraph.twig" with {
+		paragraph_content: map.body,
+    class: "field--name-field-body"
+	} %}
   {% if map.links is defined and map.links is not null %}
     <div class="w-100 text-right field--name-field-link">
       {% include "@atoms/06-buttons/00-buttons.twig" with {
         button: {
           text: map.links.title ? map.links.title : map.links.url,
-          url: map.links.url
-        },
-        classes:'nounderline btn-primary rounded-0 white-color'
+          url: map.links.url,
+          class:"nounderline btn-primary rounded-0 white-color"
+        }
       } %}
     </div>
   {% endif %}
+  </div>

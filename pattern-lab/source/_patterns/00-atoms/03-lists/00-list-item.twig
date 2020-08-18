@@ -1,10 +1,12 @@
 {# list item #}
 {# <li class="list-item"> This is list item </li> #}
 {% for key,value in list.listitems %}
-{% block list_item %}
+{# {% block list_item %} #}
 			<li class= {{ value.class }}>
+			{% block list_item %}
 				{{ value.list_item }}
+				{% endblock %}
 			</li>
-			{% endblock %}
+			{# {% endblock %} #}
 {% endfor %}
 

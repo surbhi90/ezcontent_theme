@@ -14,7 +14,7 @@
 {% if paragraph_content %}
 {% set paragraph_base_class = paragraph_base_class|default('paragraph') %}
 
-<p {{ attributes.addClass(paragraph_base_class) }}>
+<p class= {{ class }}>
   {% block paragraph_content %}
     {{ paragraph_content }}
   {% endblock %}

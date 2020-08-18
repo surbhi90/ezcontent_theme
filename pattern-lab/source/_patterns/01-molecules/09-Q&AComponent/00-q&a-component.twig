@@ -1,6 +1,11 @@
 <div class="qna-wrapper" aria-label="question answer">
-  <div>
-    <h4>{{qna.question}}</h4>
+  <div class="question">
+    {# <h4>{{qna.question}}</h4> #}
+    {% include "@atoms/02-text/00-headings.twig" with {
+    "heading_level": 4,
+    "heading": qna.question
+  } %}
   </div>
-  <div>{{qna.answer}}</div>
+
+  <div class="answer"> {{ qna.answer }} </div>
 </div>

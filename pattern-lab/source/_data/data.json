@@ -22,7 +22,9 @@
     "rectangle": {
       "src": "http://placeimg.com/400/300/tech",
       "alt": "Rectangle"
-    }
+    },
+    "src": "../../images/fpo_4x3.png",
+    "alt": "4x3 Image"
   },
   "headline": {
     "short": "Lorem ipsum dolor sit (37 characters)",

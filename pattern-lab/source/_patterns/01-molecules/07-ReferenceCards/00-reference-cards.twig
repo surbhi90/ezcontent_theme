@@ -2,13 +2,26 @@
   <div class="field--name-field-article">
     {% for key,value in referenceCard.data %}
       <div class="field__item" key={{loop.index}}>
+      
         <div class="field--type-image">
-          <img src="{{value.image}}" alt="{{value.alt}}" />
+          {% include "@atoms/04-images/01-image.twig" with {
+            src: value.image,
+            alt: value.alt
+          } %}
         </div>
+
         <div class="block-field-blocknodearticletitle" key={{loop.index}}>
-          <a href="{{value.path}}">{{value.title}}</a>
+          {% include "@atoms/12-links/00-links.twig" with {
+            url: value.path,
+            text: value.title
+          } %}
         </div>
-        <p class="referenced-summary">{{value.summary}}</p>
+
+        {% include "@atoms/02-text/01-paragraph.twig" with {
+          paragraph_content: value.summary,
+          class: "referenced-summary"
+        } %}
+
       </div>
     {% endfor %}
   </div>

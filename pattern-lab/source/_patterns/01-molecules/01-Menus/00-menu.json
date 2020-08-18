@@ -1,9 +1,9 @@
 {
-    "menu": {
+  "menu": {
     "menuitems": [
       {
         "url": "https://www.instagram.com/p/B95IVBBgruR/embed/captioned/",
-        "item": "Home",
+        "menu_item": "Home",
         "class": "nav-link"
       },
       {

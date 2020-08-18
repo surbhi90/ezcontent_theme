@@ -4,9 +4,14 @@
   {% endif %}
   <div class="row mt-2 text-center text-lg-left field--name-field-media-items">
     {% for key,value in galleryComponent.items %}
-      <div class="col-lg-3 col-md-4 col-sm-6 col-12 field--item" key={{view_mode.drupal_internal__id}}>
+      <div class="row col-lg-3 col-md-4 col-sm-6 col-12 field--item" key={{view_mode.drupal_internal__id}}>
         <a href={{value.file.url}} target="_parent" class="gallerycolorbox field--name-field-media-image h-100 gallery-item d-flex">
-          <img style="height: 245px; object-fit: cover" class="gallery-thumbnail mw-100" src={{value.file.url}} alt={{value.file.alt}} />
+          {% include "@atoms/04-images/01-image.twig" with {
+            style: '"height: 245px; object-fit: cover"',
+            src: value.file.url,
+            alt: value.file.alt,
+            class: "gallery-thumbnail mw-100"
+          }%}
         </a>
       </div>
     {% endfor %}
