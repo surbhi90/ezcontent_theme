@@ -2,19 +2,15 @@
 <nav id="nav" class="navbar-collapse collapse" id="navbarSupportedContent">
 	<div class="form-inline navbar-form">
 		<ul class="navbar-nav mr-auto">
+			{% for key,value in menu.menuitems %}
 			<li>
 				{% include "@atoms/12-links/00-links.twig" with {
-					text: "Home",
-					class: "nav-link"
+					text: value.item,
+					class: value.class,
+					url: value.url
 				}%}
 			</li>
-
-			<li>
-				{% include "@atoms/12-links/00-links.twig" with {
-					text: "Component",
-					class: "nav-link"
-				}%}
-			</li>
+			{% endfor %}
 		</ul>	
 	</div>
 </nav>

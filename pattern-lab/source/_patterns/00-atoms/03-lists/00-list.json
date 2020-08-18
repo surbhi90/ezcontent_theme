@@ -1,4 +1,7 @@
 {
-	"list_item_text":	"This is a list item",
-	"class": "list-item"
+	"list": {
+		"text": "Test Link",
+		"class": "list-item"
+	}
 }
+
