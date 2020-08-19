@@ -4,8 +4,17 @@
       quote: quote.quote
     } %}
   </div>
+
   <div class="field--name-field-source">
-    <div class="field__label">Source</div>
-    <div class="field__item">{{ quote.field__label }}</div>
+    
+    {% include "@atoms/13-content/04-field.twig" with {
+      title: quote.field__label,
+      class: "field__label"
+    } %}
+    
+    {% include "@atoms/13-content/04-field.twig" with {
+      title: quote.field__item,
+      class: "field__item"
+    } %}
   </div>
 </div>

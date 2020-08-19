@@ -1,6 +1,7 @@
 {
-    "quote":{
-        "quote":"one apple a fay keeps doctor away",
-        "field__label":"field__label"
-    }
+  "quote": {
+    "quote": "one apple a fay keeps doctor away",
+    "field__label": "field label",
+    "field__item": "field item"
+  }
 }
