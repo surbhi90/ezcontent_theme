@@ -462,5 +462,15 @@
         "class": "list-item"
       }
     ]
+  },
+  "content": {
+    "title": "This is Title",
+    "title_class": "field--name-field-title",
+    "short_title": "This is sub title",
+    "short_title_class": "field--name-field-short-title",
+    "sub_head": "This is sub head",
+    "sub_head_class": "field--name-field-subb-head",
+    "description": "This is description text",
+    "descripton_class": "field--name-field-desc"
   }
 }

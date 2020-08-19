@@ -1,0 +1,16 @@
+{% if src %} 
+  <iframe 
+	{% if class %} class= {{ class }} {% endif %} 
+	{% if src %} src={{ src }} {% endif %}
+	{% if frameBorder %} frameBorder={{ frameBorder }} {% endif %}
+	{% if height %} height={{ height }} {% endif %} 
+	{% if width %} width={{ width }} {% endif %} >
+  {% if text %}  {{ text }} {% endif %}
+  </iframe>
+	
+	{% else %}
+	<iframe class="w-100" src="https://maps.google.com/maps?hl=en&q=Agra&t=m&z=14&output=embed" frameBorder="0" height="410px">
+    Map
+	</iframe>
+{% endif %}
+

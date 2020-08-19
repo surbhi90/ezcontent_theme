@@ -1,0 +1,23 @@
+<div class="paragraph-assets" aria-label="paragraph assets">
+  {% for key, value in paragraphAssets.assets %}
+    {% if value.videolinks is defined and value.videolinks is not null %}
+      <div class="text-center embed-responsive embed-responsive-16by9"
+        key="{{ value.d_id }}">
+        <iframe class="border-0 embed-responsive-item"
+          width="560"
+          height="315"
+          src="{{ value.videolinks }}"></iframe>
+      </div>
+    {% else %}
+      <div class="text-center mt-3 mb-3" key="{{ d_id }}">
+        {% if value.imagePath is defined and value.imagePath is not null %}
+          {% include '@atoms/04-images/01-image.twig' with {
+            src: value.imagePath,
+            alt: "image",
+            class: "mw-100"
+          } %}
+        {% endif %}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
