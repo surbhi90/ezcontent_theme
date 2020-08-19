@@ -1,13 +1,14 @@
 <div class="paragraph-assets" aria-label="paragraph assets">
   {% for key, value in paragraphAssets.assets %}
     {% if value.videolinks is defined and value.videolinks is not null %}
-      <div class="text-center embed-responsive embed-responsive-16by9"
-        key="{{ value.d_id }}">
-        <iframe class="border-0 embed-responsive-item"
-          width="560"
-          height="315"
-          src="{{ value.videolinks }}"></iframe>
-      </div>
+
+    {% include "@atoms/14-iframe/00-iframe.twig" with {
+      src: value.videolinks,
+      class: "border-0 embed-responsive-item",
+      height: "315",
+      width: "560"
+    } %}
+    
     {% else %}
       <div class="text-center mt-3 mb-3" key="{{ d_id }}">
         {% if value.imagePath is defined and value.imagePath is not null %}
