@@ -1,7 +1,12 @@
 
   {% if title %}
-    <div className="gc--field--name-field-title" role="heading">{{title}}</div>
+    {% include "@atoms/13-content/00-title.twig" with {
+    title: galleryComponent.title,
+    class: "gc--field--name-field-title",
+    role: "heading"
+  } %}
   {% endif %}
+
   <div class="row mt-2 text-center text-lg-left field--name-field-media-items">
     {% for key,value in galleryComponent.items %}
       <div class="row col-lg-3 col-md-4 col-sm-6 col-12 field--item" key={{view_mode.drupal_internal__id}}>
