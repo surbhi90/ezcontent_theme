@@ -13,8 +13,11 @@
     <div class="carousel">
       {% for key, value in galleryCarousel.images %}
         <div class="gallery-block pb-4">
-          <div class="media--background banner position-relative w-100"
-            style="background-image:url({{ value.url }})"></div>
+          <div class="media--background banner w-100">
+					{% include "@atoms/04-images/01-image.twig" with {
+            src: value.url
+          }%}
+					</div>
         </div>
       {% endfor %}
     </div>
@@ -33,6 +36,6 @@
         class: 'link'
       } %}
     {% endif %}
-		
+
   </div>
 </section>

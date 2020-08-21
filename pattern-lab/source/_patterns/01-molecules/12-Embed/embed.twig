@@ -1,7 +1,12 @@
-<section class="embed-block"  aria-label="embed">
+<section class="embed-block" aria-label="embed">
   <div class="w-100 mb-3 mt-3">
     <div id="embedded-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/Bsn7FC4FFjA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      {% include '@atoms/14-iframe/00-iframe.twig' with {
+        src: embed.link,
+        height: '315',
+        width: '560',
+        allow: '"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"'
+      } %}
     </div>
   </div>
 </section>
