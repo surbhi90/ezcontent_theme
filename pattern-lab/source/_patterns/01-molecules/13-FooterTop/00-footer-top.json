@@ -1,14 +1,14 @@
 {
-  "footermenu": {
-    "footerBottom": [
+  "footermenutop": {
+    "footerTop": [
       {
         "url": "https://www.instagram.com/p/B95IVBBgruR/embed/captioned/",
-        "text": "Privacy Policy",
+        "text": "About Us",
         "class": "nav-link"
       },
       {
         "url": "https://www.instagram.com/p/B95IVBBgruR/embed/captioned/",
-        "text": "Terms of Service",
+        "text": "Career",
         "class": "nav-link"
       }
     ],

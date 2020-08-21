@@ -129,7 +129,7 @@
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-  {{ kint(content.field_media_items | keys  ) }}
+  {# {{ kint(content.field_media_items | keys  ) }} #}
   {% include "@molecules/10-GalleryComponent/00-gallery-component.twig" with data %}
   {{ content | without('field_title', '_layout_builder', 'field_media_items', 'field_body', 'field_link') }}
   </div>

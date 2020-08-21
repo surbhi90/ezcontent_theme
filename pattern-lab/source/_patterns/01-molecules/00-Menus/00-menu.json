@@ -3,12 +3,12 @@
     "menuitems": [
       {
         "url": "https://www.instagram.com/p/B95IVBBgruR/embed/captioned/",
-        "menu_item": "Home",
+        "text": "Home",
         "class": "nav-link"
       },
       {
         "url": "https://www.instagram.com/p/B95IVBBgruR/embed/captioned/",
-        "item": "Components",
+        "text": "Components",
         "class": "nav-link"
       }
     ]

@@ -20,6 +20,7 @@
   }
   .menu--footer-menu {
     li {
+      list-style: none;
       display: inline-block;
       width: 100%;
       @include respond(phone-min) {

@@ -441,16 +441,46 @@
     "menuitems": [
       {
         "url": "https://www.instagram.com/p/B95IVBBgruR/embed/captioned/",
-        "item": "Home",
+        "text": "Home",
         "class": "nav-link"
       },
       {
         "url": "https://www.instagram.com/p/B95IVBBgruR/embed/captioned/",
-        "item": "Components",
+        "text": "Components",
         "class": "nav-link"
       }
     ]
   },
+  "footermenu": {
+      "footerBottom": [
+        {
+          "url": "https://www.instagram.com/p/B95IVBBgruR/embed/captioned/",
+          "text": "Privacy Policy",
+          "class": "nav-link"
+        },
+        {
+          "url": "https://www.instagram.com/p/B95IVBBgruR/embed/captioned/",
+          "text": "Terms of Service",
+          "class": "nav-link"
+        }
+      ],
+      "copy_right": "&copy; 2020 Copyright"
+    },
+    "footermenutop": {
+      "footerTop": [
+        {
+          "url": "https://www.instagram.com/p/B95IVBBgruR/embed/captioned/",
+          "text": "About Us",
+          "class": "nav-link"
+        },
+        {
+          "url": "https://www.instagram.com/p/B95IVBBgruR/embed/captioned/",
+          "text": "Career",
+          "class": "nav-link"
+        }
+      ],
+      "copy_right": "&copy; 2020 Copyright"
+    },
   "list": {
     "listitems": [
       {

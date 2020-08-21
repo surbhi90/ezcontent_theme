@@ -50,20 +50,6 @@
   @include clearfix;
   margin-bottom: 30px;
   padding: 0;
-  // &.card_left_media {
-  //   .layout__region--second {
-  //     @include respond(phone-min) {
-  //       padding: 0 0 0 80px ;
-  //     }
-  //   }
-  // }
-  // &.card_right_media {
-  //   .layout__region--first {
-  //     @include respond(phone-min) {
-  //       padding: 0 80px 0 0 ;
-  //     }
-  //   }
-  // }
   .layout {
     .layout__region {
       .field--name-field-media-image {

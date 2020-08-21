@@ -10,7 +10,7 @@
       padding: 0 10px;
     }
   }
-  .paragraph--type--card {
+  .card_media {
     .layout--twocol-section {
       flex-direction: column;
       > .layout__region--first,
@@ -21,10 +21,10 @@
     .layout__region {
       padding: 0;
     }
-    &.card_right_media {
-      .layout--twocol-section {
-        flex-direction: column-reverse;
-      }
-    }
+    // &.card_right_media {
+    //   .layout--twocol-section {
+    //     flex-direction: column-reverse;
+    //   }
+    // }
   }
 }
