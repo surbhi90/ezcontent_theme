@@ -1,33 +1,36 @@
 @import '../../_patterns-global/scss/abstracts/variables';
 @import '../../_patterns-global/scss/abstracts/mixins';
 
-.paragraph--type--quote {
+.quote-component {
   padding: 10px 60px 10px 70px;
   margin-bottom: 40px;
   position: relative;
 
   .field--name-field-quote {
     display: block;
-    @extend %h1;
     margin-bottom: 12px;
     font-family: $heading-font;
     color: $color-grey-light-3;
+    font-size: 18px;
+    position: relative;
 
     &::before {
       color: $color-primary;
       content: open-quote;
-      font-family: Georgia, "Times New Roman", Times, serif;
+      font-family: Georgia, 'Times New Roman', Times, serif;
       font-size: 120px;
       font-weight: bold;
       line-height: 120px;
-      left: 0;
+      left: 50%;
       top: 0;
       position: absolute;
       width: 90px;
     }
   }
-
-  .field--name-job-title {
-    font-size: 14px;
+  .field--name-field-source {
+    .field__label,
+    .field__item {
+      display: inline;
+    }
   }
 }

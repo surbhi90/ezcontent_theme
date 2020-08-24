@@ -8,7 +8,6 @@
   position: relative;
 
   .field {
-
     &--name-field-title {
       @extend %h2;
       margin-top: 20px;
@@ -29,7 +28,7 @@
       justify-content: center;
       width: 100%;
 
-      >.field--item {
+      > .field--item {
         display: inline-block;
         padding: 2px;
       }

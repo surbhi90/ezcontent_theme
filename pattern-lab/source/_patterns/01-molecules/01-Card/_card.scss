@@ -73,42 +73,46 @@
           &--name-field-title {
             // @extend %h2;
             font-family: $bold-font;
-            margin-top: 20px;
-            margin-bottom: 15px;
-            font-size: 32px;
+            font-size: 36px;
+            line-height: 40px;
           }
-      
+
           &--name-field-short-title {
             font-size: 16px;
-            margin-bottom: 8px;
+            margin-top: 8px;
           }
-      
+
           &--name-field-subhead {
             border-top: 1px solid $color-white;
             font-size: 14px;
-            margin-bottom: 8px;
+            margin-top: 8px;
           }
-      
-          &--name-field-summary p {
+
+          &--name-field-summary {
             border-bottom: 1px solid $color-white;
             display: block;
             font-size: 16px;
-            margin-bottom: 15px;
+            margin-top: 30px;
           }
-      
+
           &--name-field-media-image {
             align-items: center;
             display: flex;
             margin: 0 auto;
             width: 100%;
           }
-      
+
           &--name-field-link {
             text-align: left;
+            margin-top: 40px;
+            font-weight: bold;
             a {
               font-size: 18px;
               line-height: 22px;
               color: $color-black;
+              &:hover {
+                text-decoration: none;
+              }
             }
           }
         }
@@ -124,6 +128,4 @@
       }
     }
   }
-
-  
 }

@@ -1,12 +1,8 @@
-{# list item #}
-{# <li class="list-item"> This is list item </li> #}
-{% for key,value in list.listitems %}
-{# {% block list_item %} #}
-			<li class= {{ value.class }}>
-			{% block list_item %}
-				{{ value.list_item }}
-				{% endblock %}
-			</li>
-			{# {% endblock %} #}
-{% endfor %}
 
+{% for key,value in list.listitems %}
+	<li class= {{ value.class }}>
+		{% block list_item %}
+			{{ value.list_item }}
+		{% endblock %}
+	</li>
+{% endfor %}

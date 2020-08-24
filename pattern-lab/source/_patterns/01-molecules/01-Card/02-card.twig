@@ -1,20 +1,19 @@
 <div class="card_media">
   <div class="layout layout--twocol-section layout--twocol-section--50-50">
     <div class="layout__region layout__region--first">
-		{% if text__content %}
-      {% include '@molecules/01-card-text-content.twig' %}
-		{% else %}
-			{% include '@molecules/00-card-image.twig' %}
-		{% endif %}
-		
+      {% if text__content %}
+        {% include '@molecules/01-card-text-content.twig' %}
+      {% else %}
+        {% include '@molecules/00-card-image.twig' %}
+      {% endif %}
     </div>
 
     <div class="layout__region layout__region--second">
-		{% if image %}
-			{% include '@molecules/00-card-image.twig' %}
-		{% else %}	
-			{% include '@molecules/01-card-text-content.twig' %}
-		{% endif %}
+      {% if image %}
+        {% include '@molecules/00-card-image.twig' %}
+      {% else %}
+        {% include '@molecules/01-card-text-content.twig' %}
+      {% endif %}
     </div>
   </div>
 </div>

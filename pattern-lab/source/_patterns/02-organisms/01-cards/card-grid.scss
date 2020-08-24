@@ -20,6 +20,9 @@
     }
     .layout__region {
       padding: 0;
+      .card_text_content {
+        padding: 24px 0;
+      }
     }
     // &.card_right_media {
     //   .layout--twocol-section {

@@ -8,14 +8,14 @@
       display: flex;
       flex-wrap: wrap;
     }
-     > .field__item {
+    > .field__item {
       margin-bottom: 30px;
       flex: 0 0 100%;
       @include respond(phone-min) {
-         margin-bottom: 20px;
+        margin-bottom: 20px;
       }
 
-      &:nth-child(3n+2) {
+      &:nth-child(3n + 2) {
         @include respond(phone-min) {
           margin: 0 20px;
         }
@@ -44,7 +44,7 @@
     &-blocknodearticletitle {
       margin-bottom: 25px;
       // h2 {
-        
+
       // }
       a {
         @extend %h2;

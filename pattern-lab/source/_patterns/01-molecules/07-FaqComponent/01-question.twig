@@ -1,20 +1,16 @@
-
 <div class="card-header collapse-cursor faq-card"
   data-toggle="collapse"
   data-target="#accordian{{ loop.index }}">
-
   {% include '@atoms/04-images/01-image.twig' with {
     src: '../../../images/next.png',
     alt: 'Loading'
   } %}
 
   <h3 class="mb-0">
-
-		{% include '@atoms/06-buttons/00-buttons.twig' with {
-    	class: "faq-btn",
-    	type: "button",
-			button_content: value.question
-  	} %}
-		
+    {% include '@atoms/06-buttons/00-buttons.twig' with {
+      class: 'faq-btn',
+      type: 'button',
+      button_content: value.question
+    } %}
   </h3>
 </div>

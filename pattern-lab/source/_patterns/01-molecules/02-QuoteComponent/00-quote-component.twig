@@ -1,20 +1,17 @@
 <div class="quote-component">
   <div class="field--name-field-quote">
-    {% include "@atoms/02-text/02-blockquote.twig" with {
+    {% include '@atoms/02-text/02-blockquote.twig' with {
       quote: quote.quote
     } %}
   </div>
 
   <div class="field--name-field-source">
-    
-    {% include "@atoms/13-content/04-field.twig" with {
+    {% include '@atoms/13-content/04-field.twig' with {
       title: quote.field__label,
-      class: "field__label"
-    } %}
-    :
-    {% include "@atoms/13-content/04-field.twig" with {
+      class: 'field__label'
+    } %}:{% include '@atoms/13-content/04-field.twig' with {
       title: quote.field__item,
-      class: "field__item"
+      class: 'field__item'
     } %}
   </div>
 </div>
