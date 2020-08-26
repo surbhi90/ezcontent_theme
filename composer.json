@@ -7,7 +7,8 @@
     "issues": "https://github.com/srijanone/ezcontent_theme"
   },
   "require": {
-    "drupal/bootstrap_barrio": "^4.22"
+    "drupal/bootstrap_barrio": "^4.22",
+    "drupal/components": "^2.0"
   },
   "extra": {
     "patches": {
