@@ -48,30 +48,26 @@
   ]
 %}
 
+{% set faqArray = [] %}
+{% for key , item in paragraph.field_faq_items.value %}
+  {% set faqArray = faqArray|merge([{
+    'question' : paragraph.field_faq_items[key].entity.field_question.value,
+    'answer': paragraph.field_faq_items[key].entity.field_answer.value
+  }])
+  %}
+{% endfor %}
+
 {% set data = {
-  faq:{
-    element:[
-      {
-        question:"question 01",
-        answer:"Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui."
-      },
-      {
-        question:"question 02",
-        answer:"Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui."
-      },
-      {
-        question:"question 03",
-        answer:"Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui."
-      }
-    ]
-  },
-  attributes: attributes.addClass(classes)
+  faq: {
+    element: faqArray
+  }
 } %}
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
+    {{ content.contextual_links }}
     {% block content %}
-      {% include "@molecules/08-FaqComponent/00-faq-list.twig" with data %}
+      {% include "@molecules/07-FAQ&QnAComponent/02-faq-list.twig" with data %}
     {% endblock %}
   </div>
 {% endblock paragraph %}

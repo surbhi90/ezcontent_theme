@@ -58,7 +58,10 @@
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-  {% embed "@molecules/03-QuoteComponent/00-quote-component.twig" with data %}
-  {% endembed %}
+  {{ content.contextual_links }}
+  {% block content %}
+    {% embed "@molecules/02-QuoteComponent/00-quote-component.twig" with data %}
+    {% endembed %}
+  {% endblock %}
   </div>
 {% endblock paragraph %}

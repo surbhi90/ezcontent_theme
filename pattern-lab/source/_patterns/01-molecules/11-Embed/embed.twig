@@ -1,12 +1,7 @@
-<section class="embed-block" aria-label="embed">
+<section class="embed-block"  aria-label="embed">
   <div class="w-100 mb-3 mt-3">
     <div id="embedded-container">
-      {% include '@atoms/14-iframe/00-iframe.twig' with {
-        src: embed.link,
-        height: '315',
-        width: '560',
-        allow: '"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"'
-      } %}
+      {{ embed.src|raw }}
     </div>
   </div>
 </section>

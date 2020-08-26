@@ -47,10 +47,21 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
+
+{% set data = {
+  "socialMedia":{
+    "type":paragraph.field_social_media.entity.bundle(),
+    "url":paragraph.field_social_media.entity.embed_code.value,
+    "tweetUrl":paragraph.field_social_media.entity.embed_code.value
+  }
+} %}
+
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
+    {{ content.contextual_links }}
     {% block content %}
-      {{ content }}
+      {% embed "@molecules/04-socialMedia/00-social-media.twig" with data %}
+      {% endembed %}
     {% endblock %}
   </div>
 {% endblock paragraph %}

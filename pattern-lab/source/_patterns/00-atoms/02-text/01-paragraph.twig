@@ -16,7 +16,7 @@
 
 <p >
   {% block paragraph_content %}
-    {{ paragraph_content }}
+    {{ paragraph_content|striptags }}
   {% endblock %}
 </p>
 
