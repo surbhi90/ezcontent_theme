@@ -12,9 +12,9 @@
 
 @import '../01-molecules/00-Menus/header-nav.scss';
 
-@import '../01-molecules/13-FooterTop/_footer-top.scss';
-@import '../01-molecules/14-FooterBottom/_footer-bottom.scss';
-@import '../01-molecules/12-Embed/embed.scss';
+@import '../01-molecules/12-FooterTop/_footer-top.scss';
+@import '../01-molecules/13-FooterBottom/_footer-bottom.scss';
+@import '../01-molecules/11-Embed/embed.scss';
 @import '../01-molecules/01-Card/_card.scss';
 @import '../02-organisms/00-global/01-header/_header.scss';
 @import '../02-organisms/00-global/02-footer/_footer.scss';
@@ -28,10 +28,10 @@
 @import '../01-molecules/05-HeroComponent/00-hero-component.scss';
 @import '../01-molecules/05-HeroComponent/01-hero-carousel.scss';
 @import '../01-molecules/06-ReferenceCards/00-reference-cards.scss';
-@import '../01-molecules/09-GalleryComponent/00-gallery-component.scss';
-@import '../01-molecules/10-GalleryCarousel/00-gallery-carousel.scss';
-@import '../01-molecules/07-FaqComponent/00-faq-list.scss';
-@import '../01-molecules/08-Q&AComponent/00-q&a-component.scss';
+@import '../01-molecules/08-GalleryComponent/00-gallery-component.scss';
+@import '../01-molecules/09-GalleryCarousel/00-gallery-carousel.scss';
+@import '../01-molecules/07-FAQ&QnAComponent/00-faq-list.scss';
+@import '../01-molecules/07-FAQ&QnAComponent/01-qna-list.scss';
 @import '../01-molecules/04-SocialMedia/00-social-media.scss';
-@import '../01-molecules/11-ParagraphAsset/00-paragraph-asset.scss';
+@import '../01-molecules/10-ParagraphAsset/00-paragraph-asset.scss';
 

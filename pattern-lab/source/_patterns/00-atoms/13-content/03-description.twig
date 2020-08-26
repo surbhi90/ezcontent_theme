@@ -1,2 +1,6 @@
 {% set class = "field--name-field-summary" %}
-<div class= {{ class }} > {{ content }} </div>
+<div class= {{ class }} > 
+{% block content %}
+	{{ content }} 
+{% endblock %}
+</div>

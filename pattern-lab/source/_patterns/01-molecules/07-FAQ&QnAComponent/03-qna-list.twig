@@ -1,0 +1,8 @@
+<div class="qna-wrapper" aria-label="question answer">
+  {% for key,value,index in faq.element %}
+    <div class="question">
+      {% include "@molecules/07-FAQ&QnAComponent/00-question.twig" %}
+    </div>
+    {% include "@molecules/07-FAQ&QnAComponent/01-answer.twig" %}
+  {% endfor %}
+</div>
