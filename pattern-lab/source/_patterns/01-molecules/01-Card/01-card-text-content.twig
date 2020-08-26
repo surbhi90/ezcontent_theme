@@ -1,14 +1,19 @@
 <div class="card_text_content">
-  {% include '@atoms/13-content/00-title.twig' with {
-    title: 'Create and publish great content easily'
+  {% include '@atoms/02-text/00-headings.twig' with {
+    heading_level: 1,
+    heading: 'Create and publish great content easily',
+    class: 'field--name-field-title'
   } %}
 
-  {% include '@atoms/13-content/01-short-title.twig' with {
-    title: 'Short title'
+  {% include '@atoms/02-text/00-headings.twig' with {
+    heading_level: 4,
+    heading: 'Short title',
+    class: 'field--name-field-short-title'
   } %}
 
-  {% include '@atoms/13-content/02-sub-head.twig' with {
-    title: 'Sub head'
+  {% include '@atoms/02-text/08-field.twig' with {
+    field_content: 'Sub head',
+    class: 'field--name-field-subhead'
   } %}
 
   {% include '@atoms/13-content/03-description.twig' with {

@@ -1,35 +1,47 @@
-{% if assets.title %}
-  {% include '@atoms/13-content/00-title.twig' with {
-    title: assets.title,
-    class: 'hero_banner_title field--name-field-title mr-0 text-black pt-0 pb-0 pr-2 pl-2 w-100'
-  } %}
-{% else %}
-  {% include '@atoms/13-content/00-title.twig' with {
-    title: heroComponent.heroAsset.title,
-    class: 'hero_banner_title field--name-field-title mr-0 text-black pt-0 pb-0 pr-2 pl-2 w-100'
-  } %}
-{% endif %}
+<div class="hero_banner_title field--name-field-title mr-0 text-black pt-0 pb-0 pr-2 pl-2 w-100">
+	{% if assets.title %}
+		{% include '@atoms/02-text/00-headings.twig' with {
+			heading_level: 1,
+			heading: assets.title
+		} %}
+	{% else %}
+		{% include '@atoms/02-text/00-headings.twig' with {
+			heading_level: 1,
+			heading: heroComponent.heroAsset.title
+		} %}
+	{% endif %}
+</div>
 
-{% if assets.field_short_title %}
-  {% include '@atoms/13-content/01-short-title.twig' with {
-    title: assets.field_short_title,
-    class: 'hero_banner_short_title pt-1 pl-2 pb-0'
-  } %}
-{% else %}
-  {% include '@atoms/13-content/01-short-title.twig' with {
-    title: heroComponent.heroAsset.field_short_title,
-    class: 'hero_banner_short_title pt-1 pl-2 pb-0'
-  } %}
-{% endif %}
+<div class="hero_banner_short_title pt-1 pl-2 pb-0">
+	{% if assets.field_short_title %}
+		{# {% include '@atoms/13-content/01-short-title.twig' with {
+			title: assets.field_short_title,
+			class: 'hero_banner_short_title pt-1 pl-2 pb-0'
+		} %} #}
+		{% include '@atoms/02-text/00-headings.twig' with {
+			heading_level: 4,
+			heading: assets.field_short_title
+		} %}
+	{% else %}
+		{# {% include '@atoms/13-content/01-short-title.twig' with {
+			title: heroComponent.heroAsset.field_short_title,
+			class: 'hero_banner_short_title pt-1 pl-2 pb-0'
+		} %} #}
+		{% include '@atoms/02-text/00-headings.twig' with {
+			heading_level: 4,
+			heading: heroComponent.heroAsset.field_short_title
+		} %}
+	{% endif %}
+</div>
 
 {% if assets.field_subhead %}
-  {% include '@atoms/13-content/02-sub-head.twig' with {
-    title: assets.field_subhead,
+  {% include '@atoms/02-text/08-field.twig' with {
+    field_content: assets.field_subhead,
     class: 'hero_banner_subhead field--name-field-subhead pt-1 pl-2 pb-0'
   } %}
 {% else %}
-  {% include '@atoms/13-content/02-sub-head.twig' with {
-    title: heroComponent.heroAsset.field_subhead,
+  {% include '@atoms/02-text/08-field.twig' with {
+    field_content: heroComponent.heroAsset.field_subhead,
     class: 'hero_banner_subhead field--name-field-subhead pt-1 pl-2 pb-0'
   } %}
 {% endif %}

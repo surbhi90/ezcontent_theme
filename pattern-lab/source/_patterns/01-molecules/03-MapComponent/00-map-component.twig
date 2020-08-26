@@ -5,8 +5,10 @@
     heading: map.title
   } %}
 
-  {% include '@atoms/13-content/01-short-title.twig' with {
-    title: map.subTitle
+  {% include '@atoms/02-text/00-headings.twig' with {
+    heading_level: 4,
+    heading: map.subTitle,
+    class: 'field--name-field-short-title'
   } %}
 
   {% include '@atoms/14-iframe/00-iframe.twig' with {

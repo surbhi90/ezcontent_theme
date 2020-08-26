@@ -2,10 +2,10 @@
   aria-label="gallery carousel">
   <div class="wrapper">
     {% if galleryCarousel.title %}
-      {% include '@atoms/13-content/00-title.twig' with {
-        title: galleryCarousel.title,
-        class: 'gc--field--name-field-title',
-        role: 'heading'
+      {% include '@atoms/02-text/00-headings.twig' with {
+        heading_level: 1,
+        heading: galleryCarousel.title,
+        class: 'gc--field--name-field-title'
       } %}
     {% endif %}
 

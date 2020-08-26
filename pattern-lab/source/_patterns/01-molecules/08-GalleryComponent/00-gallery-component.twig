@@ -1,10 +1,10 @@
 
-  {% if title %}
-    {% include "@atoms/13-content/00-title.twig" with {
-    title: galleryComponent.title,
-    class: "gc--field--name-field-title",
-    role: "heading"
-  } %}
+  {% if galleryComponent.title %}
+    {% include '@atoms/02-text/00-headings.twig' with {
+      heading_level: 1,
+      heading: galleryComponent.title,
+      class: 'gc--field--name-field-title'
+    } %}
   {% endif %}
 
   <div class="row mt-2 text-center text-lg-left field--name-field-media-items">
