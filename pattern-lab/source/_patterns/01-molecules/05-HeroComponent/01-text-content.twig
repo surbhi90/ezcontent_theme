@@ -1,0 +1,69 @@
+{% if assets.title %}
+  {% include '@atoms/13-content/00-title.twig' with {
+    title: assets.title,
+    class: 'hero_banner_title field--name-field-title mr-0 text-black pt-0 pb-0 pr-2 pl-2 w-100'
+  } %}
+{% else %}
+  {% include '@atoms/13-content/00-title.twig' with {
+    title: heroComponent.heroAsset.title,
+    class: 'hero_banner_title field--name-field-title mr-0 text-black pt-0 pb-0 pr-2 pl-2 w-100'
+  } %}
+{% endif %}
+
+{% if assets.field_short_title %}
+  {% include '@atoms/13-content/01-short-title.twig' with {
+    title: assets.field_short_title,
+    class: 'hero_banner_short_title pt-1 pl-2 pb-0'
+  } %}
+{% else %}
+  {% include '@atoms/13-content/01-short-title.twig' with {
+    title: heroComponent.heroAsset.field_short_title,
+    class: 'hero_banner_short_title pt-1 pl-2 pb-0'
+  } %}
+{% endif %}
+
+{% if assets.field_subhead %}
+  {% include '@atoms/13-content/02-sub-head.twig' with {
+    title: assets.field_subhead,
+    class: 'hero_banner_subhead field--name-field-subhead pt-1 pl-2 pb-0'
+  } %}
+{% else %}
+  {% include '@atoms/13-content/02-sub-head.twig' with {
+    title: heroComponent.heroAsset.field_subhead,
+    class: 'hero_banner_subhead field--name-field-subhead pt-1 pl-2 pb-0'
+  } %}
+{% endif %}
+
+{% if assets.description %}
+  {% include '@atoms/13-content/03-description.twig' with {
+    content: assets.description,
+    class: 'hero_banner_text_desc mt-1 mb-1 mr-0 pl-2 text-black'
+  } %}
+{% else %}
+  {% include '@atoms/13-content/03-description.twig' with {
+    content: heroComponent.heroAsset.description,
+    class: 'hero_banner_text_desc mt-1 mb-1 mr-0 pl-2 text-black'
+  } %}
+{% endif %}
+
+<div class="hero_banner_btn_wrapper float-right">
+  {% if assets.url %}
+    {% for key, value in assets.url %}
+      {% include '@atoms/12-links/00-links.twig' with {
+        key: loop.index,
+        href: value.link,
+        text: value.title,
+        class: 'button__group btn btn-primary rounded-0'
+      } %}
+    {% endfor %}
+  {% else %}
+    {% for key, value in heroComponent.heroAsset.url %}
+      {% include '@atoms/12-links/00-links.twig' with {
+        key: loop.index,
+        href: value.link,
+        text: value.title,
+        class: 'button__group btn btn-primary rounded-0'
+      } %}
+    {% endfor %}
+  {% endif %}
+</div>

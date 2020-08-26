@@ -1,6 +1,6 @@
 <img 
-  src={{ src }} 
-	class={{ class }} 
-	alt={{ alt }} 
+  {% if src %} src={{ src }} {% endif %}
+	{% if class %} class={{ class }} {% endif %}
+	{% if alt %} alt={{ alt }} {% endif %}
 	{% if style %} style={{ style }} {% endif %}
 />
