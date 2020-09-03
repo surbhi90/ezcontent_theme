@@ -1756,3 +1756,9 @@ header {
   padding: 0; }
   .paragraph--type--assets .field--name-field-media-image img {
     margin: 0 auto; }
+
+.alert-banner {
+  padding: 30px;
+  margin-bottom: 30px; }
+  .alert-banner p:last-child {
+    margin-bottom: 0; }
