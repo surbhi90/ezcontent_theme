@@ -1,31 +1,29 @@
 <div class="card_text_content">
   {% include '@atoms/02-text/00-headings.twig' with {
     heading_level: 1,
-    heading: 'Create and publish great content easily',
+    heading: card.title,
     class: 'field--name-field-title'
   } %}
 
   {% include '@atoms/02-text/00-headings.twig' with {
     heading_level: 4,
-    heading: 'Short title',
+    heading: card.short_title,
     class: 'field--name-field-short-title'
   } %}
 
   {% include '@atoms/02-text/08-field.twig' with {
-    field_content: 'Sub head',
+    field_content: card.sub_head,
     class: 'field--name-field-subhead'
   } %}
 
   {% include '@atoms/02-text/01-paragraph.twig' with {
-    paragraph_content: 'Content creation and publishing don’t need to be chaotic. Build a rich
-			content model with WYSIWYG, preview, layout builder, paragraphs, drag and
-			drop the content wherever you like it.<br /> Create content with utmost ease!',
+    paragraph_content: card.description,
     class: 'field--name-field-summary'
   } %}
 
   <div class="field--name-field-link">
     {% include '@atoms/12-links/00-links.twig' with {
-      text: 'CTA Link'
+      text: card.link_text
     } %}
   </div>
 </div>

@@ -6,22 +6,19 @@
 @import 'scss/abstracts/typography';
 @import 'scss/abstracts/glyphicons.scss';
 
-@import '../00-atoms/06-buttons/_button.scss';
-@import '../00-atoms/09-instagram/_instagram.scss';
-@import '../00-atoms/10-twitter/_twitter.scss';
+@import '../00-atoms/06-buttons/00-button.scss';
+@import '../00-atoms/09-instagram/00-instagram.scss';
+@import '../00-atoms/10-twitter/00-twitter.scss';
 
-@import '../01-molecules/00-Menus/header-nav.scss';
+@import '../01-molecules/00-Menus/00-header-nav.scss';
+@import '../01-molecules/12-FooterTop/00-footer-top.scss';
+@import '../01-molecules/13-FooterBottom/00-footer-bottom.scss';
+@import '../01-molecules/11-Embed/00-embed.scss';
+@import '../01-molecules/01-Card/00-card.scss';
 
-@import '../01-molecules/12-FooterTop/_footer-top.scss';
-@import '../01-molecules/13-FooterBottom/_footer-bottom.scss';
-@import '../01-molecules/11-Embed/embed.scss';
-@import '../01-molecules/01-Card/_card.scss';
-@import '../02-organisms/00-global/01-header/_header.scss';
-@import '../02-organisms/00-global/02-footer/_footer.scss';
-
-@import '../02-organisms/01-cards/card-grid.scss';
-
-
+@import '../02-organisms/00-global/01-header/00-header.scss';
+@import '../02-organisms/00-global/02-footer/00-footer.scss';
+@import '../02-organisms/01-cards/00-card-grid.scss';
 
 @import '../01-molecules/02-QuoteComponent/00-quote-component.scss';
 @import '../01-molecules/03-MapComponent/00-map-component.scss';

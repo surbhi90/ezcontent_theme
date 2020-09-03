@@ -15,13 +15,13 @@ html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, 
 header, footer, nav, section, article, hgroup, figure {
   display: block; }
 
-.paragraph--type--map .field--name-field-title, .hero_banner_title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+.map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
   font-size: 20px;
   line-height: 24px;
   font-family: 'ProximaNovaT-Thin', sans-serif;
   color: black; }
   @media only screen and (min-width: 37.5em) {
-    .paragraph--type--map .field--name-field-title, .hero_banner_title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+    .map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
       font-size: 26px;
       line-height: 30px; } }
 
@@ -1008,6 +1008,22 @@ img {
   font-size: 12px;
   line-height: 15px; }
 
+.map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-family: 'ProximaNovaT-Thin', sans-serif;
+  color: black; }
+  @media only screen and (min-width: 37.5em) {
+    .map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+      font-size: 26px;
+      line-height: 30px; } }
+
+/* CSS Transition
+	Usage: @include transition(width,0.3s,ease-out);
+ */
+/* Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
+	Usage: @include font-size(1, large);
+*/
 .region-footer .block--type-text-block {
   display: inline-block;
   margin-bottom: 15px;
@@ -1041,6 +1057,22 @@ img {
     .region-footer .menu--footer-menu li a:hover, .region-footer .menu--footer-menu li a:focus {
       background: transparent; }
 
+.map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-family: 'ProximaNovaT-Thin', sans-serif;
+  color: black; }
+  @media only screen and (min-width: 37.5em) {
+    .map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+      font-size: 26px;
+      line-height: 30px; } }
+
+/* CSS Transition
+	Usage: @include transition(width,0.3s,ease-out);
+ */
+/* Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
+	Usage: @include font-size(1, large);
+*/
 .region-footer .edge-footer {
   font-size: 12px; }
 
@@ -1075,13 +1107,13 @@ img {
       float: right;
       color: #fff; }
 
-.paragraph--type--map .field--name-field-title, .hero_banner_title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+.map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
   font-size: 20px;
   line-height: 24px;
   font-family: 'ProximaNovaT-Thin', sans-serif;
   color: black; }
   @media only screen and (min-width: 37.5em) {
-    .paragraph--type--map .field--name-field-title, .hero_banner_title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+    .map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
       font-size: 26px;
       line-height: 30px; } }
 
@@ -1109,13 +1141,13 @@ img {
 #embedded-container {
   text-align: center; }
 
-.paragraph--type--map .field--name-field-title, .hero_banner_title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+.map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
   font-size: 20px;
   line-height: 24px;
   font-family: 'ProximaNovaT-Thin', sans-serif;
   color: black; }
   @media only screen and (min-width: 37.5em) {
-    .paragraph--type--map .field--name-field-title, .hero_banner_title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+    .map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
       font-size: 26px;
       line-height: 30px; } }
 
@@ -1255,13 +1287,13 @@ header {
     .card--grid .card_media .layout__region .card_text_content {
       padding: 24px 0; }
 
-.paragraph--type--map .field--name-field-title, .hero_banner_title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+.map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
   font-size: 20px;
   line-height: 24px;
   font-family: 'ProximaNovaT-Thin', sans-serif;
   color: black; }
   @media only screen and (min-width: 37.5em) {
-    .paragraph--type--map .field--name-field-title, .hero_banner_title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+    .map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
       font-size: 26px;
       line-height: 30px; } }
 
@@ -1297,13 +1329,13 @@ header {
   .quote-component .field--name-field-source .field__item {
     display: inline; }
 
-.paragraph--type--map .field--name-field-title, .hero_banner_title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+.map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
   font-size: 20px;
   line-height: 24px;
   font-family: 'ProximaNovaT-Thin', sans-serif;
   color: black; }
   @media only screen and (min-width: 37.5em) {
-    .paragraph--type--map .field--name-field-title, .hero_banner_title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+    .map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
       font-size: 26px;
       line-height: 30px; } }
 
@@ -1313,22 +1345,22 @@ header {
 /* Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
 	Usage: @include font-size(1, large);
 */
-.paragraph--type--map {
+.map-component {
   margin-bottom: 50px; }
-  .paragraph--type--map::after {
+  .map-component::after {
     clear: both;
     content: "";
     display: table; }
-  .paragraph--type--map .field--name-field-short-title {
+  .map-component .field--name-field-short-title {
     font-size: 18px;
     padding: 10px 0; }
-  .paragraph--type--map .field--name-field-body {
+  .map-component .field--name-field-body {
     font-size: 16px;
     padding: 10px 0;
     margin-bottom: 0; }
-  .paragraph--type--map .field--name-field-link {
+  .map-component .field--name-field-link {
     text-align: right; }
-    .paragraph--type--map .field--name-field-link a {
+    .map-component .field--name-field-link a {
       background: #3367d6;
       border: 0;
       color: #fff;
@@ -1341,22 +1373,22 @@ header {
       text-align: center;
       vertical-align: middle;
       white-space: nowrap; }
-      .paragraph--type--map .field--name-field-link a:hover {
+      .map-component .field--name-field-link a:hover {
         background: #4285f4;
         color: #fff;
         text-decoration: none; }
-      .paragraph--type--map .field--name-field-link a:focus {
+      .map-component .field--name-field-link a:focus {
         background: #4285f4;
         color: #fff;
         text-decoration: none; }
 
-.paragraph--type--map .field--name-field-title, .hero_banner_title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+.map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
   font-size: 20px;
   line-height: 24px;
   font-family: 'ProximaNovaT-Thin', sans-serif;
   color: black; }
   @media only screen and (min-width: 37.5em) {
-    .paragraph--type--map .field--name-field-title, .hero_banner_title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+    .map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
       font-size: 26px;
       line-height: 30px; } }
 
@@ -1366,30 +1398,30 @@ header {
 /* Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
 	Usage: @include font-size(1, large);
 */
-.block--type-hero-media-block {
+.hero-media-component {
   padding: 0;
   margin: 30px 0; }
   @media only screen and (min-width: 37.5em) {
-    .block--type-hero-media-block {
+    .hero-media-component {
       margin: 30px 0 90px; } }
-  .block--type-hero-media-block .slick-dotted.slick-slider {
+  .hero-media-component .slick-dotted.slick-slider {
     margin-bottom: 0; }
-  .block--type-hero-media-block .slick-dots {
+  .hero-media-component .slick-dots {
     display: none !important; }
-  .block--type-hero-media-block .slick-list {
+  .hero-media-component .slick-list {
     z-index: -1; }
-  .block--type-hero-media-block .slick-arrow {
+  .hero-media-component .slick-arrow {
     width: 36px;
     height: 36px; }
-    .block--type-hero-media-block .slick-arrow::before {
+    .hero-media-component .slick-arrow::before {
       color: #3367d6;
       opacity: 1;
       font-size: 36px; }
-    .block--type-hero-media-block .slick-arrow:hover::before {
+    .hero-media-component .slick-arrow:hover::before {
       color: #3367d6; }
-    .block--type-hero-media-block .slick-arrow.slick-prev {
+    .hero-media-component .slick-arrow.slick-prev {
       left: 0; }
-    .block--type-hero-media-block .slick-arrow.slick-next {
+    .hero-media-component .slick-arrow.slick-next {
       right: 0; }
 
 .hero_banner_wrapper {
@@ -1433,6 +1465,7 @@ header {
     text-align: right; }
 
 .hero_banner_title {
+  font-size: 72px;
   letter-spacing: 1px;
   line-height: 37px;
   padding: 0 10px;
@@ -1515,13 +1548,13 @@ header {
   height: 580px !important;
   position: relative; }
 
-.paragraph--type--map .field--name-field-title, .hero_banner_title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+.map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
   font-size: 20px;
   line-height: 24px;
   font-family: 'ProximaNovaT-Thin', sans-serif;
   color: black; }
   @media only screen and (min-width: 37.5em) {
-    .paragraph--type--map .field--name-field-title, .hero_banner_title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+    .map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
       font-size: 26px;
       line-height: 30px; } }
 
@@ -1561,13 +1594,13 @@ header {
   .paragraph--type--referenced-card .referenced-summary {
     margin-bottom: 0; }
 
-.paragraph--type--map .field--name-field-title, .hero_banner_title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+.map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
   font-size: 20px;
   line-height: 24px;
   font-family: 'ProximaNovaT-Thin', sans-serif;
   color: black; }
   @media only screen and (min-width: 37.5em) {
-    .paragraph--type--map .field--name-field-title, .hero_banner_title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
+    .map-component .field--name-field-title, .paragraph--type--referenced-card .block-field-blocknodearticletitle a, .paragraph--type--gallery .field--name-field-title {
       font-size: 26px;
       line-height: 30px; } }
 

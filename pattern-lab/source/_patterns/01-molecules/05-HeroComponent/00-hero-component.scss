@@ -1,7 +1,7 @@
 @import '../../_patterns-global/scss/abstracts/variables';
 @import '../../_patterns-global/scss/abstracts/mixins';
 
-.block--type-hero-media-block {
+.hero-media-component {
   padding: 0;
   margin: 30px 0;
   @include respond(phone-min) {
@@ -89,7 +89,8 @@
 }
 
 .hero_banner_title {
-  @extend %h2;
+  // @extend %h2;
+  font-size: 72px;
   letter-spacing: 1px;
   line-height: 37px;
   padding: 0 10px;

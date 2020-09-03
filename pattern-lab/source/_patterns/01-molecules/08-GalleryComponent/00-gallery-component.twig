@@ -1,4 +1,4 @@
-
+<div class="gallery-component">
   {% if galleryComponent.title %}
     {% include '@atoms/02-text/00-headings.twig' with {
       heading_level: 1,
@@ -20,10 +20,11 @@
               style: '"height: 245px; object-fit: cover"',
               src: value.file.url,
               alt: value.file.alt,
-              class: "gallery-thumbnail mw-100"
+              "class": "'gallery-thumbnail mw-100 nm'"
             }%}
           {% endblock %}
         {% endembed %}
       </div>
     {% endfor %}
   </div>
+</div>
