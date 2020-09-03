@@ -55,7 +55,7 @@
     {% for key, value in assets.url %}
       {% include '@atoms/12-links/00-links.twig' with {
         key: loop.index,
-        href: value.link,
+        url: value.link,
         text: value.title,
         class: 'button__group btn btn-primary rounded-0'
       } %}
@@ -64,7 +64,7 @@
     {% for key, value in heroComponent.heroAsset.url %}
       {% include '@atoms/12-links/00-links.twig' with {
         key: loop.index,
-        href: value.link,
+        url: value.link,
         text: value.title,
         class: 'button__group btn btn-primary rounded-0'
       } %}

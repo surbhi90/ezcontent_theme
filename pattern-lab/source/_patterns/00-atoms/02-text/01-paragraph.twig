@@ -14,9 +14,9 @@
 {% if paragraph_content %}
 {% set paragraph_base_class = paragraph_base_class|default('paragraph') %}
 
-<p >
+<p>
   {% block paragraph_content %}
-    {{ paragraph_content }}
+    {{ paragraph_content|striptags }}
   {% endblock %}
 </p>
 
