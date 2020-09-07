@@ -170,6 +170,24 @@
             "video_url": 0
           }
         ]
+      },
+      {
+        "id": 2,
+        "image": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com//sites/default/files/2020-04/drupal_8.png",
+        "title": "Title 4",
+        "description": "Maecenas faucibus mollis interdum.",
+        "field_subhead": "Subhead 3",
+        "detail_class": "hero_banner-body hero_media_content w-100 position-absolute text-right",
+        "bgColor": "rgba(0, 249, 0, 0.37)",
+        "textPosition": "right",
+        "field_short_title": "Short Title 3",
+        "url": [
+          {
+            "link": "",
+            "title": "Link Text 3",
+            "video_url": 0
+          }
+        ]
       }
     ]
   },
@@ -469,6 +487,16 @@
   },
   "embed": {
     "link": "https://www.youtube.com/embed/Bsn7FC4FFjA"
+  },
+  "card": {
+    "title": "Create and publish great content easily",
+    "short_title": "Short Title",
+    "sub_head": "Sub Head",
+    "description": "Content creation and publishing don’t need to be chaotic. Build a rich
+                      content model with WYSIWYG, preview, layout builder, paragraphs, drag and
+                      drop the content wherever you like it.<br /> Create content with utmost ease!",
+    "link_text": "CTA Link",
+    "img_url": "https://ezcontent.srijan.net///sites/default/files/2020-04/create_content_0.png",
+    "img_alt": "image"
   }
- 
 }

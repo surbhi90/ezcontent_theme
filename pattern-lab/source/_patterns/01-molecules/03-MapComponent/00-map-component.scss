@@ -1,7 +1,7 @@
 @import '../../_patterns-global/scss/abstracts/variables';
 @import '../../_patterns-global/scss/abstracts/mixins';
 
-.paragraph--type--map {
+.map-component {
   @include clearfix;
   margin-bottom: 50px;
 

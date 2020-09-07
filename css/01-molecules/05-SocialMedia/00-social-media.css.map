@@ -1,1 +1,0 @@
-{"version":3,"sources":["01-molecules/05-SocialMedia/00-social-media.scss","00-social-media.css"],"names":[],"mappings":"AAAA,cACE,kBAAmB,CACpB;;ACAD,kVAAkV","file":"00-social-media.css","sourcesContent":[".social-media {\n  margin-bottom: 50px;\n}"]}
