@@ -50,11 +50,11 @@
 
 {% set data = {
   map:{
-    title:paragraph.field_title.value,
-    subTitle:paragraph.field_short_title.value,
-    url:paragraph.field_map.value,
-    body:paragraph.field_body.value,
-    links:{
+    title: paragraph.field_title.value,
+    subTitle: paragraph.field_short_title.value,
+    url: paragraph.field_map.value,
+    body: paragraph.field_body.value,
+    links: {
       url: paragraph.field_link.value[0].uri,
       title: paragraph.field_link.value[0].title
     },
@@ -66,8 +66,7 @@
   <div{{ attributes.addClass(classes) }}>
     {{ content.contextual_links }}
     {% block content %}
-      {% embed "@molecules/03-MapComponent/00-map-component.twig" with data %}
-      {% endembed %}
+      {% include "@molecules/03-MapComponent/00-map-component.twig" with data %}
     {% endblock %}
   </div>
 {% endblock paragraph %}

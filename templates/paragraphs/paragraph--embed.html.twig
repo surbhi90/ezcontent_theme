@@ -47,10 +47,18 @@
     not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
+
+{% set data = {
+  embed:{
+    src: paragraph.field_script.0.value
+  }
+} %}
+
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
+    {{ content.contextual_links }}
     {% block content %}
-      {{ content }}
+      {% include "@molecules/11-Embed/embed.twig" with data %}
     {% endblock %}
   </div>
 {% endblock paragraph %}
