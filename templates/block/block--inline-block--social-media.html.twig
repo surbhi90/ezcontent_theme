@@ -72,8 +72,6 @@
   {{ title_suffix }}
 
   {% block content %}
-    {{ content['#contextual_links'] }}
-    {{ kint(content|keys) }}
     {% include "@molecules/04-socialMedia/00-social-media.twig" with data %}
   {% endblock %}
 </section>
