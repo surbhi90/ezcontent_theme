@@ -49,10 +49,28 @@
   ]
 %}
 
+{%
+  set img_url = file_url(paragraph.field_media.0.entity.field_media_image.0.entity.uri.value)
+%}
+
+{% set data = {
+  "card":{
+    "title": paragraph.field_title.0.value,
+    "short_title": paragraph.field_short_title.0.value,
+    "sub_head": paragraph.field_subhead.0.value,
+    "description": paragraph.field_summary.0.value,
+    "link_text": paragraph.field_link.0.title,
+    "link_url": paragraph.field_link.0.uri,
+    "img_url": img_url,
+    "img_alt": paragraph.field_media.0.entity.field_media_image.alt
+  }
+} %}
+
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
+    {{ content.contextual_links }}
     {% block content %}
-      {{ content }}
+      {% include "@organisms/01-cards/00-card-list.twig" with data %}
     {% endblock %}
   </div>
 {% endblock paragraph %}

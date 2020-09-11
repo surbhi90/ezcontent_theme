@@ -50,23 +50,23 @@
 
 {% set data = {
   map:{
-    title:"Map Component",
-    subTitle:" India Taj Mahal is an exceptional beauty",
-    location:" Taj Mahal",
-    url:"https://maps.google.com/maps?hl=en&q=Agra&t=m&z=14&output=embed",
-    body:"Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur blandit tempus porttitor",
-    links:{
-      url: "http://www.google.com",
-      title: "Read more about"
-    }
+    title: paragraph.field_title.value,
+    subTitle: paragraph.field_short_title.value,
+    url: paragraph.field_map.value,
+    body: paragraph.field_body.value,
+    links: {
+      url: paragraph.field_link.value[0].uri,
+      title: paragraph.field_link.value[0].title
+    },
+    "aria": "Read more about location"
   }
 } %}
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
+    {{ content.contextual_links }}
     {% block content %}
-      {% embed "@molecules/04-MapComponent/00-map-component.twig" with data %}
-      {% endembed %}
+      {% include "@molecules/03-MapComponent/00-map-component.twig" with data %}
     {% endblock %}
   </div>
 {% endblock paragraph %}

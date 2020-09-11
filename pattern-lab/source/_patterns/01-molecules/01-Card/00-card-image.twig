@@ -1,8 +1,8 @@
 {% block card__img %}
   <div class="field--name-field-media-image">
     {% include '@atoms/04-images/01-image.twig' with {
-      src: 'https://ezcontent.srijan.net///sites/default/files/2020-04/create_content_0.png',
-      alt: 'image'
+      src: card.img_url,
+      alt: card.img_alt
     } %}
   </div>
 {% endblock %}

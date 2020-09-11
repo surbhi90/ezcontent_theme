@@ -11,12 +11,14 @@
     class: 'field--name-field-short-title'
   } %}
 
-  {% include '@atoms/14-iframe/00-iframe.twig' with {
-    src: map.url,
-    class: 'w-100',
+  {% set mapUrl= "https://maps.google.com/maps?hl=en&q=#{map.url}&t=m&z=14&output=embed"|replace({' ': '+', ',': ''}) %}
+
+  {% include "@atoms/14-iframe/00-iframe.twig" with {
+    src: mapUrl,
+    class: "w-100",
     frameBorder: '"0"',
-    height: '410px',
-    text: 'map'
+    height: "410",
+    text: "map"
   } %}
 
   {% include '@atoms/02-text/01-paragraph.twig' with {
