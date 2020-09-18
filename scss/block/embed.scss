@@ -2,9 +2,14 @@
 @import '../abstracts/mixins';
 @import '../abstracts/variables';
 
-.block--type-embed-block{
+.block--type-embed-block,
+.block-inline-blockembed-block {
   margin: 30px 0;
+}
 
+.block--type-embed-block,
+.block-inline-blockembed-block,
+.block-block-content {
   .field--name-field-script {
     max-width: 520px;
     margin: 0 auto;

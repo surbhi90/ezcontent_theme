@@ -2,17 +2,24 @@
 @import '../abstracts/mixins';
 @import '../abstracts/variables';
 
-.block--type-social-media{
+.block--type-social-media,
+.block-inline-blocksocial-media {
   padding: 0;
 
   twitter-widget {
     margin: 30px auto !important;
     @include clearfix;
   }
-
   iframe {
     margin: 30px auto !important;
-    width: 100% !important;
+  }
+}
+
+.block--type-social-media,
+.block-inline-blocksocial-media,
+.block-block-content {
+  iframe {
+    max-width: 100% !important;
     @include clearfix;
   }
 }
