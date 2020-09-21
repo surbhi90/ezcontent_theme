@@ -1,0 +1,17 @@
+
+      <div class="row col-lg-3 col-md-4 col-sm-6 col-12 field--item" key={{view_mode.drupal_internal__id}}>
+        {% embed "@atoms/12-links/00-links.twig" with {
+          url:gallery.file.url,
+          class: 'gallerycolorbox field--name-field-media-image h-100 gallery-item d-flex colorbox cboxElement',
+          target: "_parent"
+          } %}
+          {% block text %}
+            {% include "@atoms/04-images/01-image.twig" with {
+              style: 'height: 245px; object-fit: cover',
+              src: gallery.file.url,
+              alt: gallery.file.alt,
+              class: 'gallery-thumbnail mw-100 nm'
+            }%}
+          {% endblock %}
+        {% endembed %}
+      </div>
