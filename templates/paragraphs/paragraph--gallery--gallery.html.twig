@@ -38,6 +38,13 @@
  * @ingroup themeable
  */
 #}
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
+
 {% set itemsArray = [] %}
 {% for key , item in paragraph.field_media_items.value %}
   {% set itemsArray = itemsArray|merge([{
@@ -52,31 +59,19 @@
     }
   }]) %}
 {% endfor %}
-
 {{ attach_library("ezcontent_theme/paragraph-type-gallery") }}
-
-{% set classes = [
-  'paragraph',
-  'paragraph--type--' ~ paragraph.bundle|clean_class,
-  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-  not paragraph.isPublished() ? 'paragraph--unpublished'
-] %}
 
 {% set data = {
   title: paragraph.field_title.value,
-  galleryComponent:{
-    items: itemsArray,
-    view_mode: {
-      drupal_internal__id: "paragraph.gallery",
-      label: "Gallery"
-    },
-    type: "gallery"
+  body: paragraph.body.value,
+  links: {
+    url: paragraph.field_link.value[0].uri,
+    title: paragraph.field_link.value[0].title
   }
 } %}
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-  {% include "@molecules/08-GalleryComponent/00-gallery-component.twig" with data %}
-  {{ content | without('field_title', '_layout_builder', 'field_media_items', 'field_body', 'field_link') }}
+  {{ content | without('_layout_builder') }}
   </div>
 {% endblock paragraph %}

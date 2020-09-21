@@ -53,27 +53,89 @@
   ]
 %}
 
+{% set itemsArray = [] %}
+{#{% for key , item in items %}
+  {% set itemsArray = itemsArray|merge([{
+    'imageData' : {
+      'name' : item.content['#media'].field_media_image.0.entity.filename.value
+    },
+    'file': {
+      'alt' : item.content['#media'].field_media_image.0.alt,
+      'filename' : item.content['#media'].field_media_image.0.entity.filename.value,
+      'url' : file_url(item.content['#media'].field_media_image.0.entity.uri.value)
+    }
+  }]) %}
+{% endfor %}#}
+
+
+
+
 {% if label_hidden %}
   {% if multiple %}
-    <div{{ attributes.addClass(classes, 'field--items') }}>
-      {% for item in items %}
-        <div{{ item.attributes.addClass('field--item col-6 col-sm-6 col-md-3') }}>{{ item.content }}</div>
+    <div{{ attributes }}>
+    <div class="row mt-2 text-center text-lg-left field--name-field-media-items">
+    {% set itemsArray = [] %}
+      {% for key , item in items %}
+        {% set data = {
+          "gallery": {
+          'imageData' : {
+            'name' : item.content['#media'].field_media_image.0.entity.filename.value
+          },
+          'file': {
+            'alt' : item.content['#media'].field_media_image.0.alt,
+            'filename' : item.content['#media'].field_media_image.0.entity.filename.value,
+            'url' : file_url(item.content['#media'].field_media_image.0.entity.uri.value)
+          }
+          }
+         } %}
+        {% include "@molecules/08-GalleryComponent/00-gallery-field.twig" with data %}
       {% endfor %}
+      </div>
     </div>
   {% else %}
-    {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field--item col-6 col-sm-6 col-md-3') }}>{{ item.content }}</div>
-    {% endfor %}
+    <div class="row mt-2 text-center text-lg-left field--name-field-media-items">
+    {% set itemsArray = [] %}
+      {% for key , item in items %}
+        {% set data = {
+          "gallery": {
+          'imageData' : {
+            'name' : item.content['#media'].field_media_image.0.entity.filename.value
+          },
+          'file': {
+            'alt' : item.content['#media'].field_media_image.0.alt,
+            'filename' : item.content['#media'].field_media_image.0.entity.filename.value,
+            'url' : file_url(item.content['#media'].field_media_image.0.entity.uri.value)
+          }
+          }
+         } %}
+        {% include "@molecules/08-GalleryComponent/00-gallery-field.twig" with data %}
+      {% endfor %}
+      </div>
   {% endif %}
 {% else %}
-  <div{{ attributes.addClass(classes) }}>
+  <div{{ attributes }}>
     <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
-      <div class="field--items">
+      <div>
     {% endif %}
-    {% for item in items %}
-      <div{{ item.attributes.addClass('field--item col-6 col-sm-6 col-md-3') }}>{{ item.content }}</div>
-    {% endfor %}
+    <div class="row mt-2 text-center text-lg-left field--name-field-media-items">
+    {% set itemsArray = [] %}
+      {% for key , item in items %}
+        {% set data = {
+          "gallery": {
+          'imageData' : {
+            'name' : item.content['#media'].field_media_image.0.entity.filename.value
+          },
+          'file': {
+            'alt' : item.content['#media'].field_media_image.0.alt,
+            'filename' : item.content['#media'].field_media_image.0.entity.filename.value,
+            'url' : file_url(item.content['#media'].field_media_image.0.entity.uri.value)
+          }
+          }
+         } %}
+        {% include "@molecules/08-GalleryComponent/00-gallery-field.twig" with data %}
+      {% endfor %}
+      </div>
     {% if multiple %}
       </div>
     {% endif %}
