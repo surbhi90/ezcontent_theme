@@ -71,19 +71,13 @@
 {% set data = {
   "referenceCard":{
     "data": cardArray
-  }
+  },
+  "label": label,
+  "title_prefix": title_prefix,
+  "title_suffix": title_suffix,
+  "title_attributes": title_attributes
 } %}
 
 <section{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes.addClass('block-title') }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-
-  {% block content %}
-    {% include "@molecules/06-ReferenceCards/00-reference-cards.twig" with data %}
-  {% endblock %}
+  {% include "@molecules/06-ReferenceCards/00-reference-cards.twig" with data %}
 </section>
-
-
