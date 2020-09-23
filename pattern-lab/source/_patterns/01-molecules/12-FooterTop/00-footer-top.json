@@ -11,7 +11,20 @@
         "text": "Career",
         "class": "nav-link"
       }
-    ],
-    "copy_right": "&copy; 2020 Copyright"
+    ]
+  },
+  "socialmedia": {
+    "medialinks": [
+      {
+        "id": "github",
+        "url": "#",
+        "markup": "<span class=\"fa fa-github fa-2x\"></span>"
+      },
+      {
+        "id": "twitter",
+        "url": "#",
+        "markup": "<span class=\"fa fa-twitter fa-2x\"></span>"
+      }
+    ]
   }
 }
