@@ -2,7 +2,8 @@
 @import '../abstracts/mixins';
 @import '../abstracts/variables';
 
-.block--type-hero-media-block {
+.block--type-hero-media-block,
+.block-inline-blockhero-media-block {
   padding: 0;
   margin: 30px 0 30px 0;
   @include respond(phone-min) {
@@ -23,7 +24,7 @@
       left: 0;
     }
 
-    &.slick-next {  
+    &.slick-next {
       right: 0;
     }
   }
@@ -164,7 +165,7 @@
             width: 100%;
           }
           img {
-            width: 100%;
+            max-width: 100%;
             margin-bottom: 0;
           }
         }

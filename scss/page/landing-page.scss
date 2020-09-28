@@ -13,6 +13,7 @@
   }
   .layout__region--first,
   .layout__region--second {
+    min-width: 0;
     .block {
       margin: 0 auto 30px;
     }
