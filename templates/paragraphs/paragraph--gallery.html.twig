@@ -45,33 +45,27 @@
   not paragraph.isPublished() ? 'paragraph--unpublished'
 ] %}
 
-{% set itemsArray = [] %}
-{% for key , item in paragraph.field_media_items.value %}
-  {% set itemsArray = itemsArray|merge([{
-    'imageData' : {
-      'name' : paragraph.field_media_items[key].entity.field_media_image.0.entity.filename.value,
-      metatag: null
-    },
-    'file': {
-      'alt' : paragraph.field_media_items[key].entity.field_media_image.0.alt,
-      'filename' : paragraph.field_media_items[key].entity.field_media_image.0.entity.filename.value,
-      'url' : file_url(paragraph.field_media_items[key].entity.field_media_image.0.entity.uri.value)
-    }
-  }]) %}
-{% endfor %}
-{{ attach_library("ezcontent_theme/paragraph-type-gallery") }}
-
 {% set data = {
-  title: paragraph.field_title.value,
-  body: paragraph.body.value,
-  links: {
-    url: paragraph.field_link.value[0].uri,
-    title: paragraph.field_link.value[0].title
+    field_title: paragraph.field_title.value,
+    media_items: content.field_media_items,
+    field_body: paragraph.field_body.processed,
+    field_link: {
+      url: paragraph.field_link.0.url,
+      title: paragraph.field_link.title
+    }
   }
-} %}
+%}
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-  {{ content | without('_layout_builder') }}
+    {% if paragraph.view_mode_selection.target_id == 'paragraph.gallery' %}
+      {{ content | without('field_title', 'field_media_items', 'field_body', 'field_link') }}
+      {% include '@molecules/08-GalleryComponent/00-gallery-component.twig' with { galleryComponent: data } %}
+    {% elseif paragraph.view_mode_selection.target_id == 'paragraph.gallery_carousel' %}
+      {{ content | without('field_title', 'field_media_items', 'field_body', 'field_link') }}
+      {% include '@molecules/09-GalleryCarousel/00-gallery-carousel.twig' with { galleryCarousel: data } %}
+    {% else %}
+      {{ content }}
+    {% endif %}
   </div>
 {% endblock paragraph %}
