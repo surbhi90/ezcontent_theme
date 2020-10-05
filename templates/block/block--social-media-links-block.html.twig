@@ -65,11 +65,13 @@
   }])
   %}
 {% endfor %}
-{% set data = {
-  "socialmedia":{
-    "medialinks": mediaArray
+{%
+  set data = {
+    "socialmedia":{
+      "medialinks": mediaArray
+    }
   }
-} %}
+%}
 
 <section{{ attributes.addClass(classes) }}>
   {% block content %}

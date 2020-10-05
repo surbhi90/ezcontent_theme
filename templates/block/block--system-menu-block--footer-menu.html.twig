@@ -66,11 +66,13 @@
   }])
   %}
 {% endfor %}
-{% set data = {
-  "menu":{
-    "footerTop": menuArray
+{%
+  set data = {
+    "menu":{
+      "footerTop": menuArray
+    }
   }
-} %}
+%}
 
 <section{{ attributes.addClass(classes) }}>
   {% block content %}
