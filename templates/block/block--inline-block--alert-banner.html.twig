@@ -56,12 +56,14 @@
   ]
 %}
 
-{% set data = {
-  "alert": {
-		"bgColor": content['#block_content'].field_background_color.0.color,
-		"content": content['#block_content'].body.0.value
-	}
-} %}
+{%
+  set data = {
+    "alert": {
+      "bgColor": content['#block_content'].field_background_color.0.color,
+      "content": content['#block_content'].body.0.value
+    }
+  }
+%}
 
 <section{{ attributes.addClass(classes) }}>
   {% block content %}
