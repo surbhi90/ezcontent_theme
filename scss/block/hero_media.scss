@@ -2,13 +2,17 @@
 @import '../abstracts/mixins';
 @import '../abstracts/variables';
 
-.block--type-hero-media-block,
-.block-inline-blockhero-media-block {
+.block--type-hero-media-block {
   padding: 0;
   margin: 30px 0 30px 0;
   @include respond(phone-min) {
     margin: 30px 0 90px 0;
   }
+}
+
+.block--type-hero-media-block,
+.block-inline-blockhero-media-block,
+.block-block-content {
   .slick-arrow {
 
     &::before {
