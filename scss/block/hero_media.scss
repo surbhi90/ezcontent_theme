@@ -40,18 +40,6 @@
     padding: 0;
     position: relative;
 
-    .hero_media_content {
-      @include backgroundopacity;
-      display: block;
-      height: auto;
-      left: 0;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      padding: 10px 0;
-      padding: 20px 40px 20px 40px;
-    }
-
     // Handle dynamic text position.
 
     .hero_media_content.center {
@@ -81,80 +69,91 @@
       }
     }
 
-    .field {
+    .hero_media_content {
+      @include backgroundopacity;
+      display: block;
+      height: auto;
+      left: 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 10px 0;
+      padding: 20px 40px 20px 40px;
 
-      &--name-field-title {
-        @extend %h2;
-        letter-spacing: 1px;
-        line-height: 37px;
-        padding: 0 10px;
-        width: 100%;
-        margin: 0;
-        font-family: $heading-font;
-        color: white;
-        @include respond(tab-land) {
-          font-size: 25px;
-          line-height: 25px;
+      .field {
+        &--name-field-title {
+          @extend %h2;
+          letter-spacing: 1px;
+          line-height: 37px;
+          padding: 0 10px;
           width: 100%;
-        }
-      }
-
-      &--name-field-short-title {
-        font-size: 18px;
-        padding: 5px 10px 0;
-        margin: 0;
-
-        @include respond(phone) {
-          display: none;
+          margin: 0;
+          font-family: $heading-font;
+          color: white;
+          @include respond(tab-land) {
+            font-size: 25px;
+            line-height: 25px;
+            width: 100%;
+          }
         }
 
-        @include respond(tab-land) {
-          font-size: 14px;
-        }
-      }
+        &--name-field-short-title {
+          font-size: 18px;
+          padding: 5px 10px 0;
+          margin: 0;
 
-      &--name-field-subhead {
-        border-color: transparent;
-        font-size: 16px;
-        padding: 5px 10px 0;
+          @include respond(phone) {
+            display: none;
+          }
 
-        @include respond(phone) {
-          display: none;
-        }
-
-        @include respond(tab-land) {
-          font-size: 14px;
-        }
-      }
-
-      &--name-field-summary {
-        border-color: transparent;
-        display: block;
-        font-size: 14px;
-        padding: 5px 10px;
-
-        @include respond(phone) {
-          display: none;
-          margin-bottom: 0;
+          @include respond(tab-land) {
+            font-size: 14px;
+          }
         }
 
-        @include respond(tab-land) {
+        &--name-field-subhead {
+          border-color: transparent;
+          font-size: 16px;
+          padding: 5px 10px 0;
+
+          @include respond(phone) {
+            display: none;
+          }
+
+          @include respond(tab-land) {
+            font-size: 14px;
+          }
+        }
+
+        &--name-field-summary {
+          border-color: transparent;
+          display: block;
           font-size: 14px;
           padding: 5px 10px;
+
+          @include respond(phone) {
+            display: none;
+            margin-bottom: 0;
+          }
+
+          @include respond(tab-land) {
+            font-size: 14px;
+            padding: 5px 10px;
+          }
         }
-      }
 
-      &--name-field-link {
-        padding: 0 10px;
-        text-align: right;
+        &--name-field-link {
+          padding: 0 10px;
+          text-align: right;
 
-        @include respond(phone) {
-          display: none;
-        }
+          @include respond(phone) {
+            display: none;
+          }
 
-        a {
-          @include btnstyle;
-          min-width: 150px;
+          a {
+            @include btnstyle;
+            min-width: 150px;
+          }
         }
       }
     }
