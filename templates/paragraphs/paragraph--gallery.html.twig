@@ -38,99 +38,34 @@
  * @ingroup themeable
  */
 #}
-{{ attach_library("ezcontent_theme/paragraph-type-gallery") }}
-{%
-  set classes = [
-    'paragraph',
-    'paragraph--type--' ~ paragraph.bundle|clean_class,
-    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished'
-  ]
-%}
+{% set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+] %}
 
 {% set data = {
-  title: "testing",
-  galleryComponent:{
-    items: [
-      {
-        imageData: {
-          name: "ezcontent_banner_sans_text.png",
-          metatag: null
-        },
-        file: {
-          alt: "image",
-          filename: "srijanhero.jpg",
-          url: "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-05/srijanhero.jpg"
-        }
-      },
-      {
-        imageData: {
-          name: "create_content.png",
-          metatag: null
-        },
-        file: {
-          alt: "image",
-          filename: "create_content.png",
-          url: "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/create_content_0.png"
-        }
-      },
-      {
-        imageData: {
-          name: "page_builder.png",
-          metatag: null
-        },
-        file: {
-          alt: "image",
-          filename: "page_builder.png",
-          url: "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/page_builder_0.png"
-        }
-      },
-      {
-        imageData: {
-          name: "frontend_of_choice.png",
-          metatag: null
-        },
-        file: {
-          alt: "image",
-          filename: "srijanhero_0.jpg",
-          url: "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-05/srijanhero_0.jpg"
-        }
-      },
-      {
-        imageData: {
-          name: "decoupled.png",
-          metatag: null
-        },
-        file: {
-          alt: "image",
-          filename: "decoupled.png",
-          url: "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/decoupled_0.png"
-        }
-      },
-      {
-        imageData: {
-          name: "drupal_community.png",
-          metatag: null
-        },
-        file: {
-          alt: "image",
-          filename: "drupal_community.png",
-          url: "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-04/drupal_community_0.png"
-        }
-      }
-    ],
-    view_mode: {
-      drupal_internal__id: "paragraph.gallery",
-      label: "Gallery"
-    },
-    type: "gallery"
+    field_title: paragraph.field_title.value,
+    media_items: content.field_media_items,
+    field_body: paragraph.field_body.processed,
+    field_link: {
+      url: paragraph.field_link.0.url,
+      title: paragraph.field_link.title
+    }
   }
-} %}
+%}
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-  {# {{ kint(content.field_media_items | keys  ) }} #}
-  {% include "@molecules/10-GalleryComponent/00-gallery-component.twig" with data %}
-  {{ content | without('field_title', '_layout_builder', 'field_media_items', 'field_body', 'field_link') }}
+    {% if paragraph.view_mode_selection.target_id == 'paragraph.gallery' %}
+      {{ content | without('field_title', 'field_media_items', 'field_body', 'field_link') }}
+      {% include '@molecules/08-GalleryComponent/01-gallery-component.twig' with { galleryComponent: data } %}
+    {% elseif paragraph.view_mode_selection.target_id == 'paragraph.gallery_carousel' %}
+      {{ content | without('field_title', 'field_media_items', 'field_body', 'field_link') }}
+      {% include '@molecules/09-GalleryCarousel/00-gallery-carousel.twig' with { galleryCarousel: data } %}
+    {% else %}
+      {{ content }}
+    {% endif %}
   </div>
 {% endblock paragraph %}

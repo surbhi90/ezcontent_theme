@@ -2,101 +2,29 @@
   "galleryComponent": {
     "items": [
       {
-        "imageData": {
-          "name": "ezcontent_banner_sans_text.png",
-          "metatag": null
-        },
         "file": {
           "alt": "image",
-          "filename": "srijanhero.jpg",
-          "src": "../../../images/srijanhero.jpg"
+          "url": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-05/srijanhero.jpg"
         }
       },
       {
-        "imageData": {
-          "name": "create_content.png",
-          "metatag": null
-        },
         "file": {
           "alt": "image",
-          "filename": "create_content.png",
-          "src": "../../../images/create_content.png"
+          "url": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-05/srijanhero.jpg"
         }
       },
       {
-        "imageData": {
-          "name": "page_builder.png",
-          "metatag": null
-        },
         "file": {
           "alt": "image",
-          "filename": "page_builder.png",
-          "src": "../../../images/page_builder.png"
-        }
-      },
-      {
-        "imageData": {
-          "name": "frontend_of_choice.png",
-          "metatag": null
-        },
-        "file": {
-          "alt": "image",
-          "filename": "srijanhero.jpg",
-          "src": "../../../images/srijanhero.jpg"
-        }
-      },
-      {
-        "imageData": {
-          "name": "decoupled.png",
-          "metatag": null
-        },
-        "file": {
-          "alt": "image",
-          "filename": "decoupled.png",
-          "src": "../../../images/decoupled_0.png"
-        }
-      },
-      {
-        "imageData": {
-          "name": "drupal_community.png",
-          "metatag": null
-        },
-        "file": {
-          "alt": "image",
-          "filename": "drupal_community.png",
-          "src": "../../../images/drupal_community.png"
-        }
-      },
-      {
-        "imageData": {
-          "name": "ai_content.png",
-          "metatag": null
-        },
-        "file": {
-          "alt": "image",
-          "filename": "ai_content.png",
-          "src": "../../../images/ai_content.png"
+          "url": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com/sites/default/files/2020-05/srijanhero.jpg"
         }
       }
     ],
-    "view_mode": {
-      "drupal_internal__id": "paragraph.gallery",
-      "label": "Gallery"
+    "field_body": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
+    "field_link": {
+      "url": "http://www.google.com",
+      "title": "Learn More"
     },
-    "type": "gallery",
-    "attributes": {
-      "field_body": {
-        "value": "<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p>\r\n",
-        "format": "basic_html",
-        "processed": "<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p>",
-        "summary": ""
-      },
-      "field_link": {
-        "uri": "http://google.com",
-        "title": "Click man",
-        "options": []
-      }
-    },
-    "title": "Gallery Component"
+    "field_title": "Gallery Component"
   }
 }
