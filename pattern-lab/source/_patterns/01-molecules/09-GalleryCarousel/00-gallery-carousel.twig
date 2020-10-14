@@ -1,25 +1,29 @@
 <section class="gallery-carousel paragraph--type--gallery-carousel"
   aria-label="gallery carousel">
   <div class="wrapper">
-    {% if galleryCarousel.title %}
+    {% if galleryCarousel.field_title %}
       {% include '@atoms/02-text/00-headings.twig' with {
         heading_level: 1,
-        heading: galleryCarousel.title,
+        heading: galleryCarousel.field_title,
         class: 'gc--field--name-field-title'
       } %}
     {% endif %}
 
-    <div class="carousel">
-      {% for key, value in galleryCarousel.images %}
-        <div class="gallery-block pb-4">
-          <div class="media--background banner w-100">
-            {% include '@atoms/04-images/01-image.twig' with {
-              src: value.url
-            } %}
+    {% if galleryCarousel.media_items %}
+      {{ galleryCarousel.media_items }}
+    {% else %}
+      <div class="carousel">
+        {% for key, value in galleryCarousel.images %}
+          <div class="gallery-block pb-4">
+            <div class="media--background banner w-100">
+              {% include '@atoms/04-images/01-image.twig' with {
+                src: value.url
+              } %}
+            </div>
           </div>
-        </div>
-      {% endfor %}
-    </div>
+        {% endfor %}
+      </div>
+    {% endif %}
 
     {% if galleryCarousel.field_body %}
       {% include '@atoms/02-text/01-paragraph.twig' with {
@@ -28,10 +32,10 @@
       } %}
     {% endif %}
 
-    {% if galleryCarousel.field_link %}
+    {% if galleryCarousel.field_link.url %}
       {% include '@atoms/12-links/00-links.twig' with {
-        url: galleryCarousel.field_link,
-        text: galleryCarousel.field_link_title,
+        url: galleryCarousel.field_link.url,
+        text: galleryCarousel.field_link.title,
         class: 'link'
       } %}
     {% endif %}
