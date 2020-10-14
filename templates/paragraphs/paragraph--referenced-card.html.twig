@@ -49,29 +49,28 @@
   ]
 %}
 
+{% set cardArray = [] %}
+{% for key , item in paragraph.field_article.value %}
+  {% set pathUrl = path('entity.node.canonical', {'node':paragraph.field_article[key].entity.nid.0.value}) %}
+  {% set imgUrl =  file_url(paragraph.field_article[key].entity.field_thumbnail.0.entity.field_media_image.0.entity.uri.value) %}
+  {% set cardArray = cardArray|merge([{
+    'image' : imgUrl,
+    'title': paragraph.field_article[key].entity.title(),
+    'path': pathUrl,
+    'summary': paragraph.field_article[key].entity.field_summary.value
+  }])
+  %}
+{% endfor %}
 {% set data = {
   "referenceCard":{
-    "data": [
-      {
-        "image": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com//sites/default/files/2020-04/drupal_8.png",
-        "title": "Future of Drupal: 7, 8 or just Drupal 9? testtt",
-        "path": "this is path",
-        "summary": "With Drupal’s commitment to reinventing itself to enable ambitious digital experiences, the community is getting ready for the launch of Drupal 9, and end-of-life for Drupal 7 and Drupal 8."
-      },
-      {
-        "image": "http://ezcontent53esqcn36d.devcloud.acquia-sites.com//sites/default/files/2020-04/drupal_8.png",
-        "title": "Should Your Enterprise Go For a Headless Commerce Architecture?",
-        "path": "this is path",
-        "summary": "E-commerce enterprises looking to deliver seamless user experiences, often wonder how to do so. Is there a way that does not require them to invent their own IoT device or build back-end solutions from scratch?"
-      }
-    ]
+    "data": cardArray
   }
 } %}
-
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
+    {{ content.contextual_links }}
     {% block content %}
-      {% include "@molecules/07-ReferenceCards/00-reference-cards.twig" with data %}
+      {% include "@molecules/06-ReferenceCards/00-reference-cards.twig" with data %}
     {% endblock %}
   </div>
 {% endblock paragraph %}

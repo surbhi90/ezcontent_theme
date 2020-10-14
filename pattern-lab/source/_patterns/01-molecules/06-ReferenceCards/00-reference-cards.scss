@@ -1,54 +1,64 @@
 @import '../../_patterns-global/scss/abstracts/variables';
 @import '../../_patterns-global/scss/abstracts/mixins';
 
-.paragraph--type--referenced-card {
+.referenced-card {
   margin-bottom: 30px;
   .field--name-field-article {
-    @include respond(phone-min) {
+    @include respond(tab) {
       display: flex;
       flex-wrap: wrap;
     }
     > .field__item {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       flex: 0 0 100%;
-      @include respond(phone-min) {
-        margin-bottom: 20px;
+      @include respond(tab) {
+        margin-bottom: 30px;
       }
 
       &:nth-child(3n + 2) {
-        @include respond(phone-min) {
+        @include respond(tab) {
+          margin: 0 18px;
+        }
+        @include respond(desktop) {
           margin: 0 20px;
         }
       }
 
-      @include respond(phone-min) {
+      @include respond(tab) {
+        max-width: calc(33% - 10px);
+      }
+      @include respond(desktop) {
         max-width: calc(33% - 20px);
       }
-      // .layout__region {
-      //   width: 100%;
-      //   flex: 0 0 100%;
-      // }
     }
   }
   .field--type-image {
+    height: 300px;
+    @include respond(desktop) {
+      height: 400px;
+    }
     img {
       max-width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
     }
     margin-bottom: 30px;
   }
   .block-field {
-    // &-blocknodearticlefield-thumbnail {
-    //   margin-bottom: 10px;
-    // }
     &-blocknodearticletitle {
       margin-bottom: 25px;
-      // h2 {
-
-      // }
       a {
-        @extend %h2;
-        color: black;
+        font-family: $bold-font;
+        color: $color-dark-blue;
+        font-size: 24px;
+        line-height: 30px;
+        @include respond(tab) {
+          font-size: 30px;
+          line-height: 36px;
+        }
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
   }
