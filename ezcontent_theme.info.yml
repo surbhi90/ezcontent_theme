@@ -2,12 +2,12 @@ core: 8.x
 type: theme
 base theme: stable
 
-name: 'Ezcontent Pattern Theme'
-description: 'A Drupal based Ezcontent Pattern Theme.'
+name: 'Ezcontent Theme'
+description: 'A Pattern lab based theme for EzContent Profile.'
 
 libraries:
-  - ezcontent_pattern/bootstrap_cdn
-  - ezcontent_pattern/framework
+  - ezcontent_theme/bootstrap_cdn
+  - ezcontent_theme/framework
 
 regions:
   top_header: 'Top Header'
