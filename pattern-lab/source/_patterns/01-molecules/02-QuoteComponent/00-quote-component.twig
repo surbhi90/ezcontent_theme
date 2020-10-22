@@ -7,11 +7,8 @@
 
   <div class="field--name-field-source">
     {% include '@atoms/02-text/08-field.twig' with {
-      title: quote.field__label,
+      field_content: quote.field__label,
       class: 'field__label'
-    } %}:{% include '@atoms/02-text/08-field.twig' with {
-      title: quote.field__item,
-      class: 'field__item'
     } %}
   </div>
 </div>

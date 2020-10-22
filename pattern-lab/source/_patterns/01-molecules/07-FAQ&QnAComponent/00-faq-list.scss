@@ -48,6 +48,9 @@
     @include respond(tab) {
       padding: 0px 15px 30px;
     }
+    p {
+      margin-bottom: 0;
+    }
   }
 }
 .faq-btn {

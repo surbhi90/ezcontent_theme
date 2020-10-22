@@ -22,9 +22,11 @@
       color: $color-dark-blue;
       font-family: $bold-font;
       padding: 20px 0;
-      margin-bottom: 0;
       @include respond(tab) {
         padding: 30px 0;
+      }
+      p {
+        margin-bottom: 0;
       }
     }
 
