@@ -51,7 +51,7 @@
 {% for key , item in paragraph.field_faq_items.value %}
   {% set faqArray = faqArray|merge([{
     'question' : paragraph.field_faq_items[key].entity.field_question.value,
-    'answer': paragraph.field_faq_items[key].entity.field_answer.value
+    'answer': paragraph.field_faq_items[key].entity.field_answer.processed
   }])
   %}
 {% endfor %}
