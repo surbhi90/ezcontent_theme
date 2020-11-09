@@ -12,7 +12,7 @@
   {% endif %}
 </div>
 
-<div class="hero_banner_short_title pt-1 pl-2 pb-0">
+<div class="hero_banner_short_title pt-1 pl-2 pr-2 pb-0">
   {% if assets.field_short_title %}
     {% include '@atoms/02-text/00-headings.twig' with {
       heading_level: 4,
@@ -50,7 +50,7 @@
   {% endif %}
 </div>
 
-<div class="hero_banner_btn_wrapper float-right">
+<div class="hero_banner_btn_wrapper">
   {% if assets.url %}
     {% for key, value in assets.url %}
       {% include '@atoms/12-links/00-links.twig' with {
