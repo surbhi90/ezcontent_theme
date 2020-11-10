@@ -28,9 +28,12 @@ header {
 }
 
 .user-logged-in {
-  &.gin--classic-toolbar{
+  &.gin--classic-toolbar {
     &.toolbar-tray-open .ezcontent-header {
       top: 79px;
+    }
+    .ezcontent-header {
+      top: 39px;
     }
   }
   &.gin--vertical-toolbar {
