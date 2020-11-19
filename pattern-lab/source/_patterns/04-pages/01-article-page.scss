@@ -4,6 +4,7 @@
     h1 {
       font-family: $primary-font;
       color: $color-dark-blue;
+      font-size: 48px;
     }
   }
   .block-social-sharing-block {
@@ -39,9 +40,6 @@
     .field.field--name-field-media-items {
       background: #d8d8d8;
       padding: 45px 20px;
-      .field__item {
-        margin: 6px;
-      }
     }
   }
 }
