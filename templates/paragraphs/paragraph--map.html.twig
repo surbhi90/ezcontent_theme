@@ -54,8 +54,8 @@
     url: paragraph.field_map.value,
     body: paragraph.field_body.processed,
     links: {
-      url: paragraph.field_link.value[0].uri,
-      title: paragraph.field_link.value[0].title
+      url: paragraph.field_link.0.url,
+      title: paragraph.field_link.0.title
     },
     "aria": "Read more about location"
   }
