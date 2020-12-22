@@ -30,35 +30,137 @@
   .paragraph--type--assets,
   .paragraph--type--quote,
   .paragraph--type--faq {
-    max-width: 850px;
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
+    @include respond(desktop) {
+      max-width: 850px;
+    }
   }
   .paragraph--type--embed {
-    max-width: 980px;
+    max-width: 100%;
     margin: 0 auto;
+    @include respond(desktop) {
+      max-width: 980px;
+    }
   }
 
   .paragraph--type--gallery {
-    max-width: 1080px;
+    max-width: 100%;
     margin: 0 auto;
-    .field.field--name-field-media-items {
-      background: #d8d8d8;
-      padding: 20px 30px;
+    @include respond(desktop) {
+      max-width: 1080px;
+    }
+    .gallery-component {
+      position: relative;
       @include respond(desktop) {
-        padding: 30px 45px;
+        right: -115px;
       }
-      > .field__item {
-        display: flex;
-        padding: 10px;
-        @include respond(desktop) {
-          padding: 15px;
+      .gc--field--name-field-title {
+        padding-bottom: 20px;
+        font-family: $bold-font;
+        font-size: 22px;
+        line-height: 26px;
+        @include respond(tab) {
+          font-size: 22px;
+          line-height: 26px;
         }
-        .field--name-field-media-image {
-          img {
-            width: 300px;
-            height: 250px;
-            object-fit: cover;
+        @include respond(desktop) {
+          font-size: 24px;
+          line-height: 32px;
+        }
+      }
+      .field.field--name-field-media-items {
+        background: #d8d8d8;
+        padding: 20px 30px;
+        @include respond(tab) {
+          padding: 20px 15px;
+        }
+        @include respond(desktop) {
+          padding: 30px 45px;
+        }
+        > .field__item {
+          display: flex;
+          padding: 10px;
+          @include respond(desktop) {
+            padding: 15px;
+          }
+          .field--name-field-media-image {
+            img {
+              width: 300px;
+              height: 250px;
+              object-fit: cover;
+              @include respond(tab) {
+                width: 215px;
+              }
+              @include respond(desktop) {
+                width: 300px;
+              }
+            }
+          }
+        }
+      }
+      .field--name-field-body {
+        padding-top: 20px;
+      }
+      a.link {
+        font-size: 18px;
+        line-height: 22px;
+        color: $color-black;
+        font-family: $bold-font;
+        display: block;
+        padding-top: 20px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    &.paragraph--view-mode--gallery-carousel {
+      max-width: 100%;
+      @include respond(desktop) {
+        max-width: 850px;
+      }
+      .gallery-carousel {
+        .gc--field--name-field-title {
+          font-family: $bold-font;
+          font-size: 22px;
+          line-height: 26px;
+          @include respond(tab) {
+            font-size: 22px;
+            line-height: 26px;
+          }
+          @include respond(desktop) {
+            font-size: 24px;
+            line-height: 32px;
+          }
+        }
+        .slick-wrapper {
+          .slick {
+            .slick-slider {
+              .slick-list {
+                padding: 0;
+                &.draggable {
+                  padding-top: 20px;
+                }
+                .slick-track {
+                  padding: 0;
+                }
+              }
+            }
+          }
+        }
+        .field--name-field-body {
+          padding-top: 20px;
+        }
+        a.link {
+          font-size: 18px;
+          line-height: 22px;
+          color: $color-black;
+          font-family: $bold-font;
+          display: block;
+          padding-top: 20px;
+          &:hover {
+            text-decoration: none;
           }
         }
       }
