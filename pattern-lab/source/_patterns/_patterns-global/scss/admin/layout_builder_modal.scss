@@ -127,9 +127,10 @@ ul.paragraphs-add-dialog-list input.field-add-more-submit {
   .ui-dialog-content {
     .form-item {
       padding-bottom: 10px;
-      input.form-text, textarea {
+      input.form-text,
+      textarea {
         width: 100%;
-      }      
+      }
     }
     .button--primary {
       box-shadow: none !important;
@@ -141,10 +142,10 @@ ul.paragraphs-add-dialog-list input.field-add-more-submit {
 
   form {
     > .form-wrapper {
-      background: rgba(255, 255, 255, 0.8);
+      background: #3a3a3a;
       padding: 20px;
       margin-bottom: 20px;
-      color: #000;
+      color: $color-white;
     }
   }
 }
@@ -209,6 +210,10 @@ ul.paragraphs-add-dialog-list input.field-add-more-submit {
   padding-left: 15px;
   height: 100vh !important;
   top: 0;
+  label {
+    font-weight: 700;
+    color: $color-white;
+  }
 }
 .node--type-landing-page .ui-dialog table thead,
 .node--type-landing-page .ui-dialog table tbody {
@@ -235,7 +240,7 @@ ul.paragraphs-add-dialog-list input.field-add-more-submit {
   background: rgba(255, 255, 255, 0.8);
   color: #000;
   margin-bottom: 0;
-  border-bottom: 10px solid #d7d7d7;
+  border-bottom: 10px solid #3a3a3a;
   .form-wrapper {
     padding: 0 30px;
     .form-wrapper {
