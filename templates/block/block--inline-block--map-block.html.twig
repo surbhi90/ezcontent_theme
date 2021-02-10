@@ -56,17 +56,32 @@
   ]
 %}
 
-{% set data = {
-  map:{
-    subTitle:content['#block_content'].field_short_title.value,
-    url:content['#block_content'].field_map.0.value,
-    body:content['#block_content'].body.processed,
-    links:{
-      url: content['#block_content'].field_link.value[0].uri,
-      title: content['#block_content'].field_link.value[0].title
+
+{% if content['#block_content'] %}
+  {% set data = {
+    map:{
+      subTitle:content['#block_content'].field_short_title.value,
+      url:content['#block_content'].field_map.0.value,
+      body:content['#block_content'].body.processed,
+      links:{
+        url: content['#block_content'].field_link.value[0].uri,
+        title: content['#block_content'].field_link.value[0].title
+      }
     }
-  }
-} %}
+  } %}
+{% else %}
+  {% set data = {
+    map:{
+      subTitle:content.content['#block_content'].field_short_title.value,
+      url:content.content['#block_content'].field_map.0.value,
+      body:content.content['#block_content'].body.processed,
+      links:{
+        url: content.content['#block_content'].field_link.value[0].uri,
+        title: content.content['#block_content'].field_link.value[0].title
+      }
+    }
+  } %}
+{% endif %}
 
 <section{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
