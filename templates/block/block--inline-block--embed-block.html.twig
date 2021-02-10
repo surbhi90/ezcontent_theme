@@ -56,11 +56,19 @@
   ]
 %}
 
-{% set data = {
-  embed:{
-    src: content['#block_content'].field_script.0.value
-  }
-} %}
+{% if content['#block_content'] %}
+  {% set data = {
+    embed:{
+      src: content['#block_content'].field_script.0.value
+    }
+  } %}
+{% else %}
+  {% set data = {
+    embed:{
+      src: content.content['#block_content'].field_script.0.value
+    }
+  } %}
+{% endif %}
 
 <section{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
