@@ -57,18 +57,16 @@
 %}
 
 {% if content['#block_content'] %}
-  {% set data = {
-    embed:{
-      src: content['#block_content'].field_script.0.value
-    }
-  } %}
+  {% set content = content['#block_content'] %}
 {% else %}
-  {% set data = {
-    embed:{
-      src: content.content['#block_content'].field_script.0.value
-    }
-  } %}
+  {% set content = content.content['#block_content'] %}
 {% endif %}
+
+{% set data = {
+  embed: {
+    src: content.field_script.0.value
+  }
+} %}
 
 <section{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
